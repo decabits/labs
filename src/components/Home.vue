@@ -2,7 +2,7 @@
   <div class="home" id="Home">
     <v-app>
       <v-app-bar color="FFFFFF" fixed>
-        <!-- <v-app-bar-nav-icon @click="drawer =! drawer"> </v-app-bar-nav-icon> -->
+        
         <v-img
         style="margin-right:80%;"
           src="../assets/decabitslogo.svg"
@@ -32,9 +32,9 @@
           class="icons"
           @click="showContact()"
         ></v-icon> -->
-        <v-btn @click="showContact()" style=" top: 2%;" class="ma-2" dark small color="#2496FF">Contact Us</v-btn>
+        <v-btn @click="showContact()" style="  width:150px; height:40px; margin: 0 20px !important; font-size:16px;" class="ma-2" dark small color="#070785">Contact Us</v-btn>
       </v-app-bar>
-      <v-navigation-drawer
+      <!-- <v-navigation-drawer
         v-model="drawer"
         app
         class="indogo navdrawer"
@@ -69,7 +69,7 @@
             </v-list-item>
           </v-list-item-group>
         </v-list>
-      </v-navigation-drawer>
+      </v-navigation-drawer> -->
 
       <v-content>
         <Banner 
@@ -377,12 +377,11 @@ export default {
         right: 1.46%;
         top: 14.00%;
         bottom: 24.73%;  */
-  position: absolute;
+  
   width: 324px;
   height: 50px;
-  right: 10%;
-  top: 14%;
   background: #fafafa;
+
 }
 .list {
   width: 70%;
@@ -394,6 +393,10 @@ export default {
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
+}
+
+.icon{
+  margin-right:60% !important;
 }
 
 .contactModal input {

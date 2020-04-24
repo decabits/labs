@@ -24,7 +24,9 @@
               style="border-radius:16px;"
               @click="reserve({ item })"
             >
-              <v-img height="250" v-bind:src="item.img"> </v-img>
+            <div class="logoimage">
+              <v-img   v-bind:src="item.img"> </v-img>
+              </div>
               <v-card-title>{{ item.pname }}</v-card-title>
               <v-card-text>
                 <v-row align="center" class="mx-0">
@@ -74,7 +76,8 @@
   </div>
 </template>
 <script>
-import logomakerimage from "../assets/cardimage.svg";
+import logomakerimage from "../assets/LogomakerLogo.svg";
+
 export default {
   methods: {
     reserve: function({ item, i }) {
@@ -162,5 +165,8 @@ export default {
 <style>
 .cards {
   margin-top: 420px;
+}
+.logoimage{
+
 }
 </style>

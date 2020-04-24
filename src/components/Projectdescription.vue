@@ -8,7 +8,7 @@
             <v-img
               style="
                 height:300px;
-                background-position:center;"
+               "
               class="white--text align-end"
               v-bind:src="pname.img"
             >
@@ -288,6 +288,8 @@
   margin-top: 20px;
   margin-left: 120px;
   width: 85%;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .infoSection{
@@ -313,6 +315,10 @@
 
 .fab{
   margin: 0 4px;
+}
+
+.v-image__image{
+  background-size: contain !important;
 }
 
 /* .project{
