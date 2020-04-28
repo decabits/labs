@@ -16,7 +16,7 @@
         :src="item.src"
         reverse-transition="fade-transition"
         transition="fade-transition"
-        style="width:100%;"
+        style="width:100%; margin-top: -2px;"
         @click="banneropen(item.bname)"
       >
       </v-carousel-item>

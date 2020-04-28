@@ -6,11 +6,10 @@
           <h3 class="headingPr">{{ pname.pname }}</h3>
           <v-card style="border-radius:11px 11px 0px 0px; ">
             <v-img
-              style="
-                height:300px;
-               "
+              style="height:300px;"
               class="white--text align-end"
               v-bind:src="pname.img"
+              
             >
             </v-img>
 
@@ -24,7 +23,7 @@
           <div class="infoSection">
             <div>
               <p>Website:</p>
-              <a style="color:#999999" href="https://logomaker.decabits.com/">https://logomaker.decabits.com/</a>
+              <a style="color:#999999" href="https://logomaker.decabits.com/" target="_blank">https://logomaker.decabits.com/</a>
             </div>
             <div>
               <p>Category: </p>
@@ -36,8 +35,8 @@
             </div>
             <div>
               <p>Share: </p>
-              <a href="https://www.facebook.com/decabits/"><i class="fab fa-facebook"></i></a>
-              <a href="https://www.instagram.com/decabits/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/decabits/" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/decabits/" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
           <!-- <v-select
@@ -158,6 +157,7 @@
     </b-container>
     <div>
       <p class="desc">Project Description</p>
+      <v-img src='../assets/Labdecabits_Labdecabits.png' style="height:60%; width:60%; margin-left:20%; margin-top:2%; "></v-img>
       <p class="content">
         Our foremost project at labs decabits is created with a vision to help
         other startups to flourish & grow with minimal investment. To begin
@@ -285,11 +285,13 @@
 }
 .content {
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  
   margin-top: 20px;
   margin-left: 120px;
   width: 85%;
   font-size: 18px;
   font-style: italic;
+  color: #828282;
 }
 
 .infoSection{

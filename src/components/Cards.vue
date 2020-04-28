@@ -20,17 +20,17 @@
               :elevation="hover ? 16 : 2"
               :loading="loading"
               class="mx-auto my-12"
-              max-width="374"
+              max-width="355"
               style="border-radius:16px;"
               @click="reserve({ item })"
             >
             <div class="logoimage">
-              <v-img   v-bind:src="item.img"> </v-img>
+              <v-img   v-bind:src="item.img" aspect-ratio="1.5"> </v-img>
               </div>
               <v-card-title>{{ item.pname }}</v-card-title>
               <v-card-text>
                 <v-row align="center" class="mx-0">
-                  <v-rating
+                  <!-- <v-rating
                     :value="4"
                     color="amber"
                     dense
@@ -38,7 +38,7 @@
                     readonly
                     size="14"
                   >
-                  </v-rating>
+                  </v-rating> -->
                   <div class="grey--text ml-4">
                    <!-- ({{ item.numberOfPeopleRated }}) -->
                   </div>
@@ -166,7 +166,5 @@ export default {
 .cards {
   margin-top: 420px;
 }
-.logoimage{
 
-}
 </style>
