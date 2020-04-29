@@ -14,7 +14,7 @@
             </v-img>
 
             <v-card-text class="text--primary">
-              <p>{{ pname.description }}</p>
+              <p style="width:fit-content; margin:0 auto;">{{ pname.description }}</p>
             </v-card-text>
           </v-card>
           </v-col>
@@ -249,7 +249,7 @@
 .desc {
   font-style: normal;
   font-size: 38px;
-  font-weight: light;
+  font-weight: bold;
   margin-top: 50px;
   margin-left: 100px;
   width: 90%;
@@ -260,6 +260,7 @@
   color: #333333;
   /* font-family: "Roboto", sans-serif; */
   font-size: 40px;
+  font-weight: bold;
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -285,13 +286,13 @@
 }
 .content {
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-  
   margin-top: 20px;
   margin-left: 120px;
   width: 85%;
   font-size: 18px;
-  font-style: italic;
-  color: #828282;
+  font-style: normal;
+  color: #555555;
+  font-weight: lighter;
 }
 
 .infoSection{

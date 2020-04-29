@@ -8,15 +8,14 @@
               height: 427px;
               left: 40px;
               top: 110px;
-              background: #555555;
-              border-radius: 8px;">
+              border-radius: 16px;">
       <v-carousel-item 
         v-for="(item,i) in items"
         :key="i"
         :src="item.src"
         reverse-transition="fade-transition"
         transition="fade-transition"
-        style="width:100%; margin-top: -2px;"
+        style="width:100%; margin: auto; border-radius:16px;"
         @click="banneropen(item.bname)"
       >
       </v-carousel-item>

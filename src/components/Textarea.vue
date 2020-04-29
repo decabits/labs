@@ -25,11 +25,12 @@
         position: absolute;
         width: 600px;
         height: 143px;
-        left: 100px;
+        left: 110px;
         top: 766px;
         font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: #555555;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 100;
         font-size: 25px;
         line-height: 33px;
         
