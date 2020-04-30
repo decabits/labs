@@ -20,7 +20,7 @@
           prepend-inner-icon="mdi-magnify"
           label="Search.."
           v-model="search"
-          class="hidden-sm-and-down searchbox"
+          class="searchbox"
         />
         <!-- <v-icon
           style="top: 14%;"

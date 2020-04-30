@@ -157,7 +157,7 @@
     </b-container>
     <div>
       <p class="desc">Project Description</p>
-      <v-img src='../assets/Labdecabits_Labdecabits.png' style="height:60%; width:60%; margin-left:20%; margin-top:2%; "></v-img>
+      <v-img src='../assets/Labdecabits_Labdecabits.png' style="height:60%; width:60%; margin:0 auto; "></v-img>
       <p class="content">
         Our foremost project at labs decabits is created with a vision to help
         other startups to flourish & grow with minimal investment. To begin
@@ -191,13 +191,13 @@
         editable file for making the needful alterations.
       </p>
       <p style="margin-left:15%; font-weight:bold;"> Step 1 :</p>
-      <v-img src='../assets/gif1.gif' style="height:60%; width:60%; margin-left:20%; margin-top:5%; border: 3px solid #999999"></v-img>
+      <v-img src='../assets/gif1.gif' style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"></v-img>
       <p style="margin-left:15%;  font-weight:bold;"> Step 2 :</p>
-      <v-img src='../assets/gif2.gif' style="height:60%; width:60%; margin-left:20%;  margin-top:5%; border: 3px solid #999999"></v-img>
+      <v-img src='../assets/gif2.gif' style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"></v-img>
       <p style="margin-left:15%;  font-weight:bold;"> Step 3 :</p>
-      <v-img src='../assets/gif3.gif' style="height:60%; width:60%; margin-left:20%;  margin-top:5%; border: 3px solid #999999"></v-img>
+      <v-img src='../assets/gif3.gif' style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"></v-img>
       
-      <p class="content" style="margin-left:30%; margin-top:30px;">
+      <p class="content" style="margin:16px auto; text-align:center; ">
         Feel free to give your suggestions or feedback in the following link or
         mail us at <a href="info@decabits.com">info@decabits.com</a>
       </p>
@@ -286,8 +286,7 @@
 }
 .content {
   font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-  margin-top: 20px;
-  margin-left: 120px;
+  margin:0 auto;
   width: 85%;
   font-size: 18px;
   font-style: normal;

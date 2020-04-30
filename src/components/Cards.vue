@@ -163,8 +163,6 @@ export default {
 };
 </script>
 <style>
-.cards {
-  margin-top: 420px;
-}
+
 
 </style>

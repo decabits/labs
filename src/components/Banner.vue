@@ -3,11 +3,9 @@
       cycle
       hide-delimiter-background
       show-arrows-on-hover
-      style=" position: absolute;
-              max-width: 95%;
-              height: 427px;
-              left: 40px;
-              top: 110px;
+      style=" 
+              width: 90%;
+              margin:120px auto 0 auto;
               border-radius: 16px;">
       <v-carousel-item 
         v-for="(item,i) in items"
@@ -15,7 +13,7 @@
         :src="item.src"
         reverse-transition="fade-transition"
         transition="fade-transition"
-        style="width:100%; margin: auto; border-radius:16px;"
+        style="border-radius:16px;"
         @click="banneropen(item.bname)"
       >
       </v-carousel-item>
@@ -74,9 +72,10 @@ export default {
 }
 </script>
 <style >
-.banner{
-  top: 120px;
-  left: 1px;
-  border-radius: 8px;
+@media only screen and (max-width:1160px)
+{
+  .theme--dark.v-btn.v-btn--icon{
+    color:black;
+  }
 }
 </style>
