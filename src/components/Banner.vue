@@ -3,6 +3,7 @@
       cycle
       hide-delimiter-background
       show-arrows-on-hover
+      hide-delimiters="true"
       style=" 
               width: 90%;
               margin:120px auto 0 auto;
