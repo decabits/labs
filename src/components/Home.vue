@@ -4,8 +4,8 @@
       <v-app-bar color="FFFFFF" fixed>
         
         <v-img
-        style="margin-right:80%;"
-          src="../assets/decabitslogo.svg"
+        style="margin-right:60%;"
+          src="../assets/Labdecabits_logo.svg"
           max-height="60"
           contain
           class="icon"
@@ -396,7 +396,9 @@ export default {
 }
 
 .icon{
-  margin-right:60% !important;
+  margin-right:55% !important;
+  height: 100%;
+  width: fit-content;
 }
 
 .contactModal input {
