@@ -35,8 +35,8 @@
             </div>
             <div>
               <p>Share: </p>
-              <a href="https://www.facebook.com/decabits/" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="https://www.instagram.com/decabits/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fdecabits%2F&amp;src=sdkpreparse" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet" target="_blank"><i class="fa fa-twitter"></i></a>
             </div>
           </div>
           <!-- <v-select
