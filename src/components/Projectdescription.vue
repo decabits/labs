@@ -9,34 +9,51 @@
               style="height:300px;"
               class="white--text align-end"
               v-bind:src="pname.img"
-              
             >
             </v-img>
-
             <v-card-text class="text--primary">
-              <p style="width:fit-content; margin:0 auto;">{{ pname.description }}</p>
+              <p style="width:fit-content; margin:0 auto;">
+                {{ pname.description }}
+              </p>
             </v-card-text>
           </v-card>
-          </v-col>
+        </v-col>
         <v-col cols="6" style="position:relative">
-
           <div class="infoSection">
             <div>
               <p>Website:</p>
-              <a style="color:#999999" href="https://logomaker.decabits.com/" target="_blank">https://logomaker.decabits.com/</a>
+              <a
+                style="color:#2496FF"
+                href="https://logomaker.decabits.com/"
+                target="_blank"
+                >https://logomaker.decabits.com/</a
+              >
             </div>
             <div>
-              <p>Category: </p>
-              <p>logomaker,web service</p>
+              <p>Category:</p>
+              <p>Logomaker, Web Service</p>
             </div>
             <div>
-              <p>Tags: </p>
-              <p>Logo,Design,Graphics,UI</p>
+              <p>Tags:</p>
+              <p>Logo, Design, Graphics, UI</p>
             </div>
             <div>
-              <p>Share: </p>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fdecabits%2F&amp;src=sdkpreparse" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="https://twitter.com/intent/tweet" target="_blank"><i class="fa fa-twitter"></i></a>
+              <p>Share:</p>
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fdecabits%2F&amp;src=sdkpreparse"
+                target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://twitter.com/intent/tweet?text=Welcome to Decabits Lab"
+                target="_blank"
+                ><i class="fa fa-twitter"></i
+              ></a>
+              <a
+                href="https://api.whatsapp.com/send?phone=91999925147&text=Welcome to Decabits Lab"
+                target="_blank"
+                ><i style="color:#4FCE5D" class="fab fa-whatsapp"></i>
+              </a>
             </div>
           </div>
           <!-- <v-select
@@ -157,7 +174,10 @@
     </b-container>
     <div>
       <p class="desc">Project Description</p>
-      <v-img src='../assets/Labdecabits_Labdecabits.png' style="height:60%; width:60%; margin:0 auto; "></v-img>
+      <v-img
+        src="../assets/Labdecabits_Labdecabits.png"
+        style="height:60%; width:60%; margin:0 auto; "
+      ></v-img>
       <p class="content">
         Our foremost project at labs decabits is created with a vision to help
         other startups to flourish & grow with minimal investment. To begin
@@ -190,13 +210,22 @@
         the design, with a single click the consumer will be redirected to an
         editable file for making the needful alterations.
       </p>
-      <p style="margin-left:15%; font-weight:bold;"> Step 1 :</p>
-      <v-img src='../assets/gif1.gif' style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"></v-img>
-      <p style="margin-left:15%;  font-weight:bold;"> Step 2 :</p>
-      <v-img src='../assets/gif2.gif' style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"></v-img>
-      <p style="margin-left:15%;  font-weight:bold;"> Step 3 :</p>
-      <v-img src='../assets/gif3.gif' style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"></v-img>
-      
+      <p style="margin-left:15%; font-weight:bold;">Step 1 :</p>
+      <v-img
+        src="../assets/gif1.gif"
+        style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"
+      ></v-img>
+      <p style="margin-left:15%;  font-weight:bold;">Step 2 :</p>
+      <v-img
+        src="../assets/gif2.gif"
+        style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"
+      ></v-img>
+      <p style="margin-left:15%;  font-weight:bold;">Step 3 :</p>
+      <v-img
+        src="../assets/gif3.gif"
+        style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"
+      ></v-img>
+
       <p class="content" style="margin:16px auto; text-align:center; ">
         Feel free to give your suggestions or feedback in the following link or
         mail us at <a href="info@decabits.com">info@decabits.com</a>
@@ -217,7 +246,6 @@
 </template>
 
 <script>
-
 // export default {
 //   // methods: {
 //   //    showContact(){
@@ -254,14 +282,14 @@
   margin-left: 100px;
   width: 90%;
   color: #333333;
-  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .headingPr {
   color: #333333;
   /* font-family: "Roboto", sans-serif; */
   font-size: 40px;
   font-weight: bold;
-  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* .theme--light.v-label {
@@ -285,8 +313,8 @@
   line-height: 66px;
 }
 .content {
-  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-  margin:0 auto;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
   width: 85%;
   font-size: 18px;
   font-style: normal;
@@ -294,32 +322,31 @@
   font-weight: lighter;
 }
 
-.infoSection{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-
+.infoSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.infoSection div{
-  display:flex;
-  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-  color:#999999;
-  font-size:1.3vw;
+.infoSection div {
+  display: flex;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #999999;
+  font-size: 1.3vw;
 }
-.infoSection div p:first-child{
-  color:black
+.infoSection div p:first-child {
+  color: black;
 }
 
 .infoSection p {
   margin: 0 4px;
 }
 
-.fab{
+.fab {
   margin: 0 4px;
 }
 
-.v-image__image{
+.v-image__image {
   background-size: contain !important;
 }
 
