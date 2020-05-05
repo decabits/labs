@@ -45,12 +45,12 @@
                 ><i class="fab fa-facebook"></i
               ></a>
               <a
-                href="https://twitter.com/intent/tweet?text=Welcome to Decabits Lab"
+                href="https://twitter.com/intent/tweet?text=Welcome to Lab Decabits, find out what we are experimenting with next."
                 target="_blank"
                 ><i class="fa fa-twitter"></i
               ></a>
               <a
-                href="https://api.whatsapp.com/send?phone=91999925147&text=Welcome to Decabits Lab"
+                href="https://api.whatsapp.com/send?phone=+91999925147&text=Welcome to Lab Decabits, find out what we are experimenting with next."
                 target="_blank"
                 ><i style="color:#4FCE5D" class="fab fa-whatsapp"></i>
               </a>
@@ -210,6 +210,7 @@
         the design, with a single click the consumer will be redirected to an
         editable file for making the needful alterations.
       </p>
+      <div style="height:100px;"></div>
       <p style="margin-left:15%; font-weight:bold;">Step 1 :</p>
       <v-img
         src="../assets/gif1.gif"
