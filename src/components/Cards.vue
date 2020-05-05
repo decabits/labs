@@ -25,7 +25,7 @@
               @click="reserve({ item })"
             >
               <div class="logoimage">
-                <v-img v-bind:src="item.img" aspect-ratio="1.5"> </v-img>
+                <v-img v-bind:src="item.img" aspect-ratio="2"> </v-img>
               </div>
               <v-card-title>{{ item.pname }}</v-card-title>
               <v-card-text>
