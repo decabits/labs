@@ -24,8 +24,8 @@
               style="border-radius:16px;"
               @click="reserve({ item })"
             >
-            <div class="logoimage">
-              <v-img   v-bind:src="item.img" aspect-ratio="1.5"> </v-img>
+              <div class="logoimage">
+                <v-img v-bind:src="item.img" aspect-ratio="1.5"> </v-img>
               </div>
               <v-card-title>{{ item.pname }}</v-card-title>
               <v-card-text>
@@ -40,7 +40,7 @@
                   >
                   </v-rating> -->
                   <div class="grey--text ml-4">
-                   <!-- ({{ item.numberOfPeopleRated }}) -->
+                    <!-- ({{ item.numberOfPeopleRated }}) -->
                   </div>
                 </v-row>
                 <div style="font-weight:bold;">{{ item.description }}</div>
@@ -65,7 +65,7 @@
                   text
                   @click="reserve({ item })"
                 >
-                  Read More
+                  Read More...
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -112,8 +112,7 @@ export default {
           pname: "Logo Maker",
           rating: 4,
           numberOfPeopleRated: 143,
-          description:
-            "Make your own unique logo for free ",
+          description: "Make your own unique logo for free ",
           tags: ["Vue.js", "HTML", "CSS", "Fabric.js"],
           review: ["Good", "Awesome", "Loved it", "Not Good"],
         },
@@ -166,5 +165,4 @@ export default {
 .cards {
   margin-top: 420px;
 }
-
 </style>
