@@ -31,11 +31,7 @@
             </div>
             <div>
               <p>Category:</p>
-<<<<<<< HEAD
               <p>Logomaker, Web Service.</p>
-=======
-              <p>Logomaker, Web Service.....</p>
->>>>>>> fa855adbfab9479b4e40cd589bc6368b8722a317
             </div>
             <div>
               <p>Tags:</p>
