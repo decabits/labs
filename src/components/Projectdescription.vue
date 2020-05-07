@@ -31,7 +31,7 @@
             </div>
             <div>
               <p>Category:</p>
-              <p>Logomaker, Web Service</p>
+              <p>Logomaker, Web Service.</p>
             </div>
             <div>
               <p>Tags:</p>
