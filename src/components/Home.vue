@@ -2,12 +2,13 @@
   <div class="home" id="Home">
     <v-app>
       <v-app-bar color="FFFFFF" fixed>
-        <!-- <v-app-bar-nav-icon @click="drawer =! drawer"> </v-app-bar-nav-icon> -->
         <v-img
-          src="../assets/decabitslogo.svg"
+          style="margin-right:60%;"
+          src="../assets/Labdecabits_logo.svg"
           max-height="60"
           contain
           class="icon"
+          @click="logoopen()"
         >
         </v-img>
         <v-text-field
@@ -18,9 +19,9 @@
           prepend-inner-icon="mdi-magnify"
           label="Search.."
           v-model="search"
-          class="hidden-sm-and-down searchbox"
+          class="searchbox"
         />
-        <v-icon
+        <!-- <v-icon
           style="top: 14%;"
           nav
           min-width
@@ -29,9 +30,19 @@
           v-text="'fa-envelope-o'"
           class="icons"
           @click="showContact()"
-        ></v-icon>
+        ></v-icon> -->
+        <v-btn
+          @click="showContact()"
+          style="  width:150px; height:40px; margin: 0 20px !important; font-size:16px;"
+          class="ma-2"
+          dark
+          small
+          color="#070785"     
+          >Contact Us</v-btn
+        >
+        
       </v-app-bar>
-      <v-navigation-drawer
+      <!-- <v-navigation-drawer
         v-model="drawer"
         app
         class="indogo navdrawer"
@@ -66,14 +77,14 @@
             </v-list-item>
           </v-list-item-group>
         </v-list>
-      </v-navigation-drawer>
+      </v-navigation-drawer> -->
 
       <v-content>
-        <Banner />
+        <Banner v-on:bannerClicked="reachusbanner" />
         <Textarea />
         <a
           href="#desc"
-          v-smooth-scroll="{ duration: 3000 }"
+          v-smooth-scroll="{ duration: 1000 }"
           style="text-decoration:none;"
         >
           <Cards
@@ -206,9 +217,16 @@ export default {
     Textarea,
     Cards,
     Projectdescription,
-    comments
+    comments,
   },
   methods: {
+    reachusbanner(value) {
+      console.log("Helloooooooo = " + value);
+      this.$refs["my-modal"].show();
+    },
+    logoopen() {
+      window.open("https://decabits.com/");
+    },
     Onchange(e) {
       console.log(e.target.value);
     },
@@ -264,15 +282,15 @@ export default {
           your_name: this.form.name,
           contact_submitted: this.form.phone ? "yes" : "no",
           your_email: this.form.email,
-          your_message: this.form.message + "\n" + this.form.phone
+          your_message: this.form.message + "\n" + this.form.phone,
         };
         this.axios
           .post("http://blog.entnetwrk.com/contact.php", newData, {
             headers: {
-              "Content-Type": "application/x-www-form-urlencoded"
-            }
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
           })
-          .then(res => {
+          .then((res) => {
             this.snackbar = true;
             console.log(res.data);
           });
@@ -304,7 +322,7 @@ export default {
     },
     storeTags(e) {
       this.tagData = e;
-    }
+    },
   },
 
   data: () => ({
@@ -312,7 +330,7 @@ export default {
       name: "",
       email: "",
       phone: "",
-      message: ""
+      message: "",
     },
     snackbar: false,
     text: "Message sent Successfully! ",
@@ -322,32 +340,32 @@ export default {
     singleItem: {
       pname: "",
       img: "",
-      description: ""
+      description: "",
     },
     form: {
       name: "",
       email: "",
       message: "",
-      phone: ""
+      phone: "",
     },
     drawer: false,
     // item: 1,
     items: [
       { icon: "mdi-home", route: "/", name: "home" },
       { icon: "mdi-account", name: "contactus" },
-      { icon: "mdi-cogs", route: "/services", name: "services" }
-    ]
+      { icon: "mdi-cogs", route: "/services", name: "services" },
+    ],
   }),
   computed: {
     filteredItems: function() {
-      return this.cardData.filter(d => {
+      return this.cardData.filter((d) => {
         // // for (var i = 0; i <d.tags.length; i++) {
         //   return d.tags[i].toLowerCase().match(this.search)
         // // }
         return d.pname.toLowerCase().match(this.search.toLowerCase());
       });
-    }
-  }
+    },
+  },
 };
 </script>
 <style>
@@ -365,11 +383,9 @@ export default {
         right: 1.46%;
         top: 14.00%;
         bottom: 24.73%;  */
-  position: absolute;
+
   width: 324px;
   height: 50px;
-  right: 5%;
-  top: 14%;
   background: #fafafa;
 }
 .list {
@@ -377,10 +393,17 @@ export default {
   margin: 6px;
 }
 .icons {
-  margin-bottom: 20px;
+  margin-left: 90%;
+  margin-bottom: 18px;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
+}
+
+.icon {
+  margin-right: 55% !important;
+  height: 100%;
+  width: fit-content;
 }
 
 .contactModal input {

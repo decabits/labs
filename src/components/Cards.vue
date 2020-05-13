@@ -20,15 +20,17 @@
               :elevation="hover ? 16 : 2"
               :loading="loading"
               class="mx-auto my-12"
-              max-width="374"
+              max-width="420"
               style="border-radius:16px;"
               @click="reserve({ item })"
             >
-              <v-img height="250" v-bind:src="item.img"> </v-img>
+              <div class="logoimage">
+                <v-img v-bind:src="item.img" aspect-ratio="2"> </v-img>
+              </div>
               <v-card-title>{{ item.pname }}</v-card-title>
               <v-card-text>
                 <v-row align="center" class="mx-0">
-                  <v-rating
+                  <!-- <v-rating
                     :value="4"
                     color="amber"
                     dense
@@ -36,9 +38,9 @@
                     readonly
                     size="14"
                   >
-                  </v-rating>
+                  </v-rating> -->
                   <div class="grey--text ml-4">
-                   <!-- ({{ item.numberOfPeopleRated }}) -->
+                    <!-- ({{ item.numberOfPeopleRated }}) -->
                   </div>
                 </v-row>
                 <div style="font-weight:bold;">{{ item.description }}</div>
@@ -74,7 +76,8 @@
   </div>
 </template>
 <script>
-import logomakerimage from "../assets/cardimage.svg";
+import logomakerimage from "../assets/LogomakerLogo.svg";
+
 export default {
   methods: {
     reserve: function({ item, i }) {
@@ -109,8 +112,7 @@ export default {
           pname: "Logo Maker",
           rating: 4,
           numberOfPeopleRated: 143,
-          description:
-            "Make your own unique logo for free ",
+          description: "Make your own unique logo for free ",
           tags: ["Vue.js", "HTML", "CSS", "Fabric.js"],
           review: ["Good", "Awesome", "Loved it", "Not Good"],
         },
@@ -159,8 +161,4 @@ export default {
   },
 };
 </script>
-<style>
-.cards {
-  margin-top: 420px;
-}
-</style>
+<style></style>

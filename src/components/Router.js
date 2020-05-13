@@ -1,17 +1,16 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from '../components/Home';
+import Vue from "vue";
+import Router from "vue-router";
+import Home from "../components/Home";
 // import ContactUs from '../components/Contactus';
-import Services from '../components/Services';
+import Services from "../components/Services";
 
-Vue.use(Router)
-
+Vue.use(Router);
 const router = new Router({
     mode: "history",
     routes: [{
-            path: '/',
-            name: 'Home',
-            component: Home
+            path: "/",
+            name: "Home",
+            component: Home,
         },
         // {
         //     path: '/contactus',
@@ -19,11 +18,11 @@ const router = new Router({
         //     component: ContactUs
         // },
         {
-            path: '/services',
-            name: 'Services',
-            component: Services
-        }
-    ]
-})
+            path: "/services",
+            name: "Services",
+            component: Services,
+        },
+    ],
+});
 
-export default router
+export default router;
