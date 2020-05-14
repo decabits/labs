@@ -76,7 +76,7 @@
   </div>
 </template>
 <script>
-import logomakerimage from "../assets/LogomakerLogo.svg";
+import logomakerimage from "../assets/Logomaker_LabDecabits.png";
 
 export default {
   methods: {
