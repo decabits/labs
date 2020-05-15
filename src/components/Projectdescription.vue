@@ -45,12 +45,12 @@
                 ><i class="fab fa-facebook"></i
               ></a>
               <a
-                href="https://twitter.com/intent/tweet?text=Welcome to Lab Decabits, find out what we are experimenting with next."
+                href="https://twitter.com/intent/tweet?text=Checkout this awesome development tool-Logo Maker- at https://labs.decabits.com/"
                 target="_blank"
                 ><i class="fa fa-twitter"></i
               ></a>
               <a
-                href="https://api.whatsapp.com/send?phone=+91999925147&text=Welcome to Lab Decabits, find out what we are experimenting with next."
+                href="https://api.whatsapp.com/send?phone=+91999925147&text=Checkout this awesome development tool-Logo Maker- at https://labs.decabits.com/"
                 target="_blank"
                 ><i style="color:#4FCE5D" class="fab fa-whatsapp"></i>
               </a>
