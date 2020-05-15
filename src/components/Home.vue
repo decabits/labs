@@ -285,7 +285,7 @@ export default {
           your_message: this.form.message + "\n" + this.form.phone,
         };
         this.axios
-          .post("http://blog.entnetwrk.com/contact.php", newData, {
+          .post("https://blog.entnetwrk.com/contact.php", newData, {
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
             },
