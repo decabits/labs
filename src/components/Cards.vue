@@ -65,7 +65,7 @@
                   text
                   @click="reserve({ item })"
                 >
-                  Read More
+                  Read More..
                 </v-btn>
               </v-card-actions>
             </v-card>
