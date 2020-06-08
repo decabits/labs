@@ -30,18 +30,7 @@
               <v-card-title>{{ item.pname }}</v-card-title>
               <v-card-text>
                 <v-row align="center" class="mx-0">
-                  <!-- <v-rating
-                    :value="4"
-                    color="amber"
-                    dense
-                    half-increments
-                    readonly
-                    size="14"
-                  >
-                  </v-rating> -->
-                  <div class="grey--text ml-4">
-                    <!-- ({{ item.numberOfPeopleRated }}) -->
-                  </div>
+                  <div class="grey--text ml-4"></div>
                 </v-row>
                 <div style="font-weight:bold;">{{ item.description }}</div>
               </v-card-text>
@@ -116,46 +105,6 @@ export default {
           tags: ["Vue.js", "HTML", "CSS", "Fabric.js"],
           review: ["Good", "Awesome", "Loved it", "Not Good"],
         },
-        //  ,{
-        //    img: 'https://i.picsum.photos/id/111/300/300.jpg' ,
-        //    pname: 'CAR',
-        //    rating: 3,
-        //    numberOfPeopleRated: 143,
-        //    description : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ',
-        //    tags: ["vue", "css","html"]
-        //    }
-        //  ,{
-        //     img: 'https://i.picsum.photos/id/239/300/300.jpg' ,
-        //    pname: 'flower',
-        //    rating: 2,
-        //    numberOfPeopleRated: 143,
-        //    description : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ',
-        //    tags: ["javascript", "css","kds"]
-        //    }
-        //   ,{
-        //    img: 'https://i.picsum.photos/id/249/300/300.jpg' ,
-        //    pname: 'Country',
-        //    rating: 4,
-        //    numberOfPeopleRated: 143,
-        //    description : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ',
-        //    tags: ["sid", "android","html"]
-        //   }
-        //   ,{
-        //    img: 'https://i.picsum.photos/id/219/300/300.jpg' ,
-        //    pname: 'Tiger',
-        //    rating: 1,
-        //    numberOfPeopleRated: 143,
-        //    description : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ',
-        //    tags: ["javascript", "css","ashesh"]
-        //   }
-        //   ,{
-        //    img: 'https://i.picsum.photos/id/119/300/300.jpg' ,
-        //    pname: 'Macbook',
-        //    rating: 4,
-        //    numberOfPeopleRated: 143,
-        //    description :'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ',
-        //    tags: ["swift", "css","html"]
-        //   }
       ],
     };
   },
