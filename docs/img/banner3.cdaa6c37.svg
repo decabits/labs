@@ -22,13 +22,6 @@
 <stop offset="0.661458" stop-color="white" stop-opacity="0.338542"/>
 <stop offset="0.999761" stop-color="#FCFCFC" stop-opacity="0"/>
 </radialGradient>
-<<<<<<< HEAD
-=======
-<radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(620.25 313.25) rotate(49.361) scale(288.274 604.788)">
-<stop stop-color="#170F34"/>
-<stop offset="1" stop-color="#170F34" stop-opacity="0"/>
-</radialGradient>
->>>>>>> b6796732fd2d721e468611a1d8a3a0ca8813fbd2
 <clipPath id="clip0">
 <rect width="1195" height="410" fill="white"/>
 </clipPath>

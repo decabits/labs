@@ -3,7 +3,7 @@
     <v-app>
       <v-app-bar color="FFFFFF" fixed>
         <v-img
-          style="margin-right:60%;"
+          style="margin-right:60%; cursor:pointer;"
           src="../assets/Labdecabits_logo.svg"
           max-height="60"
           contain
@@ -14,71 +14,23 @@
         <v-text-field
           style="border-radius:11px;"
           flat
-          solo-inverted
+          solo
           hide-details
           prepend-inner-icon="mdi-magnify"
           label="Search.."
           v-model="search"
           class="searchbox"
         />
-        <!-- <v-icon
-          style="top: 14%;"
-          nav
-          min-width
-          color="blue"
-          light
-          v-text="'fa-envelope-o'"
-          class="icons"
-          @click="showContact()"
-        ></v-icon> -->
         <v-btn
           @click="showContact()"
           style="  width:150px; height:40px; margin: 0 20px !important; font-size:16px;"
           class="ma-2"
           dark
           small
-          color="#070785"     
+          color="#070785"
           >Contact Us</v-btn
         >
-        
       </v-app-bar>
-      <!-- <v-navigation-drawer
-        v-model="drawer"
-        app
-        class="indogo navdrawer"
-        color="#2496FF"
-        width="80px"
-      >
-        <v-app-bar-nav-icon
-          @click="drawer = !drawer"
-          color="white"
-          class="navicon mx-4 my-4"
-        >
-        </v-app-bar-nav-icon>
-        <v-list class="list">
-          <v-list-item-group v-model="item" color="primary">
-            <v-list-item
-              v-for="(item, i) in items"
-              :key="i"
-              router
-              :to="item.route"
-              @click="showContact(item.name)"
-            >
-              <v-list-item-icon>
-                <v-icon
-                  nav
-                  min-width
-                  color="white"
-                  light
-                  v-text="item.icon"
-                  class="icons"
-                ></v-icon>
-              </v-list-item-icon>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-navigation-drawer> -->
-
       <v-content>
         <Banner v-on:bannerClicked="reachusbanner" />
         <Textarea />
@@ -181,25 +133,6 @@
         Close
       </v-btn>
     </v-snackbar>
-    <!-- <div class="modal fade" ref="my-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div> -->
   </div>
 </template>
 
@@ -285,7 +218,7 @@ export default {
           your_message: this.form.message + "\n" + this.form.phone,
         };
         this.axios
-          .post("http://blog.entnetwrk.com/contact.php", newData, {
+          .post("https://blog.entnetwrk.com/contact.php", newData, {
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
             },
@@ -298,13 +231,6 @@ export default {
 
       console.log(this.form);
     },
-    // showContact(name){
-    //    console.log(name);
-    //   //  if(name == 'contactus'){
-    //   //  this.$refs['my-modal'].show()
-    //   //  }
-    //   this.$refs['my-modal'].show()
-    // },
     showContact() {
       this.$refs["my-modal"].show();
     },
@@ -359,9 +285,6 @@ export default {
   computed: {
     filteredItems: function() {
       return this.cardData.filter((d) => {
-        // // for (var i = 0; i <d.tags.length; i++) {
-        //   return d.tags[i].toLowerCase().match(this.search)
-        // // }
         return d.pname.toLowerCase().match(this.search.toLowerCase());
       });
     },
@@ -378,12 +301,6 @@ export default {
   transform: rotate(90deg);
 }
 .searchbox {
-  /* position: absolute;
-        left: 76.04%;
-        right: 1.46%;
-        top: 14.00%;
-        bottom: 24.73%;  */
-
   width: 324px;
   height: 50px;
   background: #fafafa;
@@ -407,12 +324,10 @@ export default {
 }
 
 .contactModal input {
-  /* margin-bottom:12px; */
   width: 60%;
-  margin: 5px auto;
+  margin: 10px auto;
 }
 .contactModal textarea {
-  /* margin-bottom:12px; */
   width: 60%;
   margin: 12px auto;
 }
@@ -425,51 +340,6 @@ export default {
   position: absolute;
   right: 2%;
 }
-
-/* .modal-backdrop {
-   background-color: red;
-}
-
-.contactModal{
-display: flex;
-justify-content: space-around;
-}
-
-.contactModal input{
-  margin-bottom:12px;
-  border: none;
-  border-bottom: 1px solid black;
-  border-radius: 0;
-  padding: 0;
-  outline:none;
-  box-shadow:none !important;
-  width: 100%;
-  transition: all 0.2s linear;
-  margin: 0 auto;
-}
-
-.contactModal textarea{
-  margin-top:12px;
-  border: none;
-  border-bottom: 1px solid black;
-  border-radius: 0;
-  padding: 0;
-  outline:none;
-   box-shadow:none !important;
-  width: 100%;
-  transition: all 0.2s linear;
-  margin: 0 auto;
-}
-
-.contactModal textarea:focus{
-  width: 140%;
-  border-bottom: 1px solid black;
-}
-
-.contactModal input:focus{
-  width: 140%;
-  border-bottom: 1px solid black;
-} */
 .validate {
   width: 60%;
   text-align: left;
