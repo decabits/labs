@@ -1,5 +1,5 @@
 module.exports = {
   outputDir: "docs",
-  // publicPath: "/labdecabits/",
+  publicPath: "/labdecabits/",
   transpileDependencies: ["vuetify"]
 };
