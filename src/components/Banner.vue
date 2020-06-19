@@ -8,7 +8,8 @@
     style=" 
               width: 90%;
               margin:120px auto 0 auto;
-              border-radius: 16px;"
+              border-radius: 16px;
+              cursor:pointer;"
   >
     <v-carousel-item
       v-for="(item, i) in items"
@@ -58,7 +59,6 @@ export default {
   },
   methods: {
     banneropen(name) {
-      // window.open("https://logomaker.decabits.com/");
       if (name == "reachus") {
         this.reserve(name);
       } else if (name == "blogomaker") {
