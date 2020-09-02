@@ -6,10 +6,11 @@
     show-arrows-on-hover
     hide-delimiters="true"
     style=" 
-              width: 90%;
-              margin:120px auto 0 auto;
+              width: 100%;
+              margin:40px auto 0 auto;
               border-radius: 16px;
-              cursor:pointer;"
+              cursor:pointer;
+              transition-timing-function: ease-in;"
   >
     <v-carousel-item
       v-for="(item, i) in items"
