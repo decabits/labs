@@ -66,10 +66,12 @@
 </template>
 <script>
 import logomakerimage from "../assets/Logomaker_LabDecabits.png";
+import Logomaker from "./Logomaker";
 
 export default {
   methods: {
     reserve: function({ item, i }) {
+      console.log(item, "Priya");
       this.$emit("cardClicked", { item, i });
     },
   },
@@ -100,8 +102,29 @@ export default {
           img: logomakerimage,
           pname: "Logo Maker",
           rating: 4,
+          url: "https://logomaker.decabits.com/",
           numberOfPeopleRated: 143,
+          category: "Logomaker, Web Service",
           description: "Make your own unique logo for free ",
+          tags: ["Vue.js", "HTML", "CSS", "Fabric.js"],
+          description_tags: "Logo, Design, Graphics, UI",
+          review: ["Good", "Awesome", "Loved it", "Not Good"],
+          facebook_link:
+            "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fdecabits%2F&amp;src=sdkpreparse",
+          twitter_link:
+            "https://twitter.com/intent/tweet?text=Checkout this awesome development tool-Logo Maker- at https://labs.decabits.com/",
+          whatsapp_link:
+            "https://api.whatsapp.com/send?phone=+91999925147&text=Checkout this awesome development tool-Logo Maker- at https://labs.decabits.com/",
+          project_description: { Logomaker },
+        },
+        {
+          img: logomakerimage,
+          pname: "Notification Trapper",
+          rating: 4,
+          numberOfPeopleRated: 261,
+          category: "",
+          url: "https://notification-trapper.herokuapp.com/",
+          description: "A one-stop solution for all your testing emails!",
           tags: ["Vue.js", "HTML", "CSS", "Fabric.js"],
           review: ["Good", "Awesome", "Loved it", "Not Good"],
         },

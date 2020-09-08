@@ -242,6 +242,13 @@ export default {
       this.singleItem.pname = value.item.pname;
       this.singleItem.img = value.item.img;
       this.singleItem.description = value.item.description;
+      this.singleItem.url = value.item.url;
+      this.singleItem.category = value.item.category;
+      this.singleItem.description_tags = value.item.description_tags;
+      this.singleItem.url = value.item.url;
+      this.singleItem.facebook_link = value.item.facebook_link;
+      this.singleItem.twitter_link = value.item.twitter_link;
+      this.singleItem.whatsapp_link = value.item.whatsapp_link;
     },
     storeData(e) {
       this.cardData = e;
