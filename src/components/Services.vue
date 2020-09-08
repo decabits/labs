@@ -6,7 +6,8 @@
       >
       <v-app-bar-nav-icon @click="drawer =! drawer"> </v-app-bar-nav-icon>
       <v-img src="../assets/decabitslogo.svg"
-        max-height="60"
+        max-height="60" 
+        style="margin-right:68%;"
         contain
         class=icon>
         </v-img>

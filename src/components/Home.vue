@@ -3,7 +3,7 @@
     <v-app>
       <v-app-bar color="FFFFFF" fixed>
         <v-img
-          style="margin-right:60%; cursor:pointer;"
+          style="margin-right:68%; cursor:pointer;"
           src="../assets/Labdecabits_logo.svg"
           max-height="60"
           contain
@@ -11,7 +11,7 @@
           @click="logoopen()"
         >
         </v-img>
-        <v-text-field
+        <!-- <v-text-field
           style="border-radius:11px;"
           flat
           solo
@@ -20,7 +20,7 @@
           label="Search.."
           v-model="search"
           class="searchbox"
-        />
+        /> -->
         <v-btn
           @click="showContact()"
           style="  width:150px; height:40px; margin: 0 20px !important; font-size:16px;"
@@ -76,7 +76,8 @@
           <b-form-input
             id="your_name"
             v-model="form.name"
-            placeholder="  Name"
+            placeholder="Name"
+            style="width:100%;"
           ></b-form-input>
           <p class="validate">{{ errors.name }}</p>
 
@@ -84,12 +85,14 @@
             id="your_email"
             v-model="form.email"
             placeholder="  Email"
+            style="width:100%;"
           ></b-form-input>
           <p class="validate">{{ errors.email }}</p>
           <b-form-input
             id="phone-input"
             v-model="form.phone"
             placeholder=" Phone No."
+            style="width:100%;"
           ></b-form-input>
           <p class="validate">{{ errors.phone }}</p>
         </div>
@@ -99,6 +102,7 @@
             v-model="form.message"
             placeholder="Your message..."
             rows="5"
+            style="width:100%;"
           ></b-form-textarea>
           <p class="validate">{{ errors.message }}</p>
         </div>
@@ -158,7 +162,7 @@ export default {
       this.$refs["my-modal"].show();
     },
     logoopen() {
-      window.open("https://decabits.com/");
+      window.open("https://labs.decabits.com/","_self");
     },
     Onchange(e) {
       console.log(e.target.value);
