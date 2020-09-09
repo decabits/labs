@@ -7,6 +7,7 @@
           src="../assets/Labdecabits_logo.svg"
           max-height="60"
           contain
+          position="none"
           class="icon"
           @click="logoopen()"
         >
@@ -24,7 +25,7 @@
         <v-btn
           @click="showContact()"
           style="  width:150px; height:40px; margin: 0 20px !important; font-size:16px;"
-          class="ma-2"
+          class="ma-2 showcontact"
           dark
           small
           color="#070785"
@@ -350,5 +351,16 @@ export default {
   font-size: 10px;
   margin: 0 auto;
   color: red;
+}
+@media only screen and (max-width: 400px){
+  .icon{
+    position: relative;
+  }
+  .showcontact{
+    position: absolute;
+    top: 50%;
+    left: 30% !important;
+    transform: translate(50%,-50%);
+  }
 }
 </style>

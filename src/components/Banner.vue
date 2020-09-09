@@ -78,4 +78,11 @@ export default {
     color: black;
   }
 }
+@media only screen and (max-width: 400px){
+  .banner{
+    position: relative;
+    top: -168px;
+  }
+}
+
 </style>
