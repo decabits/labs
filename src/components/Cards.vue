@@ -27,15 +27,15 @@
               <div class="logoimage">
                 <v-img v-bind:src="item.img" aspect-ratio="2"> </v-img>
               </div>
-              <v-card-title>{{ item.pname }}</v-card-title>
+              <v-card-title style="display:flex; justify-content:center;">{{ item.pname }}</v-card-title>
               <v-card-text>
                 <v-row align="center" class="mx-0">
                   <div class="grey--text ml-4"></div>
                 </v-row>
-                <div style="font-weight:bold;">{{ item.description }}</div>
+                <div style="font-weight:bold; display:flex; justify-content:center;">{{ item.description }}</div>
               </v-card-text>
-              <v-divider class="mx-4"></v-divider>
-              <v-card-text>
+              <!-- <v-divider class="mx-4"></v-divider> -->
+              <!-- <v-card-text>
                 <v-chip-group column>
                   <v-chip
                     color="#3389C2"
@@ -45,8 +45,8 @@
                     >{{ tag }}</v-chip
                   >
                 </v-chip-group>
-              </v-card-text>
-              <v-card-actions>
+              </v-card-text> -->
+              <!-- <v-card-actions>
                 <v-btn
                   style="border-radius:11px"
                   color="#2496FF"
@@ -56,7 +56,7 @@
                 >
                   Read More
                 </v-btn>
-              </v-card-actions>
+              </v-card-actions> -->
             </v-card>
           </v-hover>
         </v-col>
