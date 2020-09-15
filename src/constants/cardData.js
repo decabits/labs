@@ -73,7 +73,7 @@ export default [
         categories: "NotificationTrapper , Web Service",
         review: ["Good", "Awesome", "Loved it", "Not Good"],
         website:"website:",
-        websitelink:"https://logomaker.decabits.comhttp://notification-trapper.herokuapp.com/",
+        websitelink:"notification-trapper.herokuapp.com/",
         description: {
             mainImage: ntmainimage,
             paragraphs: [
