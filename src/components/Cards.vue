@@ -1,19 +1,7 @@
 <template>
   <div class="cards">
-    <div id="skl" style="padding-top:70px;">
+    <b-container id="crd" fluid>
       <v-row>
-        <v-col v-for="(item, i) in Itemfilter" :key="i" cols="6" sm="4">
-          <v-skeleton-loader
-            class="mx-auto"
-            max-width="300"
-            type="card,paragraph,button"
-          ></v-skeleton-loader>
-        </v-col>
-      </v-row>
-    </div>
-
-    <b-container id="crd" style="display:none; width:90% " fluid>
-      <v-row no-gutters>
         <v-col cols="6" sm="4" v-for="(item, i) in Itemfilter" :key="i">
           <v-hover v-slot:default="{ hover }" close-delay="200">
             <v-card
@@ -27,15 +15,15 @@
               <div class="logoimage">
                 <v-img v-bind:src="item.img" aspect-ratio="2"> </v-img>
               </div>
-              <v-card-title style="display:flex; justify-content:center;">{{ item.pname }}</v-card-title>
+              <v-card-title style="display:flex; justify-content:left;">{{ item.pname }}</v-card-title>
               <v-card-text>
-                <v-row align="center" class="mx-0">
+                <v-row align="left" class="mx-0">
                   <div class="grey--text ml-4"></div>
                 </v-row>
-                <div style="font-weight:bold; display:flex; justify-content:center;">{{ item.description }}</div>
+                <div style="font-weight:bold; display:flex; justify-content:left;">{{ item.tagline }}</div>
               </v-card-text>
-              <!-- <v-divider class="mx-4"></v-divider> -->
-              <!-- <v-card-text>
+              <v-divider class="mx-4"></v-divider>
+              <v-card-text>
                 <v-chip-group column>
                   <v-chip
                     color="#3389C2"
@@ -45,9 +33,9 @@
                     >{{ tag }}</v-chip
                   >
                 </v-chip-group>
-              </v-card-text> -->
-              <!-- <v-card-actions>
-                <v-btn
+              </v-card-text> 
+              <v-card-actions>
+                <!-- <v-btn
                   style="border-radius:11px"
                   color="#2496FF"
                   dark
@@ -55,8 +43,8 @@
                   @click="reserve({ item })"
                 >
                   Read More
-                </v-btn>
-              </v-card-actions> -->
+                </v-btn> -->
+              </v-card-actions> 
             </v-card>
           </v-hover>
         </v-col>
@@ -65,7 +53,7 @@
   </div>
 </template>
 <script>
-import logomakerimage from "../assets/Logomaker_LabDecabits.png";
+// import notificationtrapperimage from "../assets/NotificationTrapper__logo.png";
 
 export default {
   methods: {
@@ -74,21 +62,21 @@ export default {
     },
   },
   mounted() {
-    setTimeout(() => {
-      console.log("3s elapsed!");
-      document.getElementById("crd").style.display == "none"
-        ? (document.getElementById("crd").style.display = "")
-        : null;
-      document.getElementById("skl").style.display == ""
-        ? (document.getElementById("skl").style.display = "none")
-        : null;
-    }, 3000),
-      setTimeout(() => {
-        this.$emit("AllItems", this.items);
-      }, 0),
-      setTimeout(() => {
-        this.$emit("AllTags", this.items.tags);
-      }, 0);
+    // setTimeout(() => {
+    //   console.log("3s elapsed!");
+    //   document.getElementById("crd").style.display == "none"
+    //     ? (document.getElementById("crd").style.display = "")
+    //     : null;
+    //   document.getElementById("skl").style.display == ""
+    //     ? (document.getElementById("skl").style.display = "none")
+    //     : null;
+    // }, 3000),
+    //   setTimeout(() => {
+    //     this.$emit("AllItems", this.items);
+    //   }, 0),
+    //   setTimeout(() => {
+    //     this.$emit("AllTags", this.items.tags);
+    //   }, 0);
   },
   props: {
     Itemfilter: Array,
@@ -96,15 +84,7 @@ export default {
   data() {
     return {
       items: [
-        {
-          img: logomakerimage,
-          pname: "Logo Maker",
-          rating: 4,
-          numberOfPeopleRated: 143,
-          description: "Make your own unique logo for free ",
-          tags: ["Vue.js", "HTML", "CSS", "Fabric.js"],
-          review: ["Good", "Awesome", "Loved it", "Not Good"],
-        },
+        
       ],
     };
   },

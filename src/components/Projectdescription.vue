@@ -13,7 +13,7 @@
             </v-img>
             <v-card-text class="text--primary">
               <p style="width:fit-content; margin:0 auto;">
-                {{ pname.description }}
+                {{ pname.tagline }}
               </p>
             </v-card-text>
           </v-card>
@@ -21,21 +21,23 @@
         <v-col cols="6" style="position:relative">
           <div class="infoSection">
             <div>
-              <p>Website:</p>
+              <p>{{pname.website}}</p>
               <a
                 style="color:#2496FF"
-                href="https://logomaker.decabits.com/"
+                :href="pname.websitelink"
                 target="_blank"
-                >https://logomaker.decabits.com/</a
+                >{{pname.websitelink}}</a
               >
             </div>
-            <div>
+            <div v-if="pname.categories">
               <p>Category:</p>
-              <p>Logomaker, Web Service</p>
+      
+              <p>{{pname.categories}}</p>
             </div>
-            <div>
+           
+            <div v-if="pname.tags">
               <p>Tags:</p>
-              <p>Logo, Design, Graphics, UI</p>
+              <p>{{pname.tags.join(', ')}}</p>
             </div>
             <div>
               <p>Share:</p>
@@ -59,65 +61,36 @@
         </v-col>
       </v-row>
     </b-container>
-    <div>
+    <div v-if="pname.description">
       <p class="desc">Project Description</p>
-      <v-img
-        src="../assets/Labdecabits_Labdecabits.png"
-        style="height:60%; width:60%; margin:0 auto; "
-      ></v-img>
-      <p class="content">
-        Our foremost project at labs decabits is created with a vision to help
-        other startups to flourish & grow with minimal investment. To begin
-        with, we want to provide our customers with utmost convenience.
-      </p>
-      <p class="content">
-        Any consumer who wants to explore & design logomakes can begin with
-        selecting/outlining a company name followed by picking fonts & case. The
-        next step for creating the perfect trademark is connecting symbolic
-        shades & colors to it. Move further by determining & specifying
-        meaningful icons for a pleasing layout.
-      </p>
-      <p class="content">
-        Our high tech team of designers & developers have collaborated to
-        fabricate the flawless logomakes. With frontend technology like Vue.JS,
-        HTML & CSS- the project was set up & completed with precision & fruitful
-        results. Apart from the basic technologies & coding, a very special part
-        & copart of this project is contributed by an inbuilt canvas library
-        called Fabric.JS. A powerful & simple library to build SVGs. With an
-        easy yet robust tech stack, Labs.decabits delivered its very first open
-        source tool for going live.
-      </p>
-      <p class="content">
-        A noteworthy detail & feature makes its free download service of the
-        logos, in all formats like PNG, JPEG & SVG (With or without background)
-      </p>
-      <p class="content">
-        Any logo the consumer may create will directly be saved in the
-        galleries, even if you are halfway through. Once you want to get back to
-        the design, with a single click the consumer will be redirected to an
-        editable file for making the needful alterations.
-      </p>
-      <div style="height:100px;"></div>
-      <p style="margin-left:15%; font-weight:bold;">Step 1 :</p>
-      <v-img
-        eager="true"
-        src="../assets/gif1.gif"
-        style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999" 
-      >
-      </v-img>
-      <p style="margin-left:15%;  font-weight:bold;">Step 2 :</p>
-      <v-img
-        eager="true"
-        src="../assets/gif2.gif"
-        style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"
-      ></v-img>
-      <p style="margin-left:15%;  font-weight:bold;">Step 3 :</p>
-      <v-img
-        eager="true"
-        src="../assets/gif3.gif"
-        style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999"
-      ></v-img>
+      <template v-if="pname.description.mainImage">
+        <v-img       
+          :src="pname.description.mainImage"
+          style="height:60%; width:60%; margin:0 auto; "
+        ></v-img>
+      </template>
 
+      <template  v-if="pname.description.paragraphs.length">
+        <p  class="content" v-for="p in pname.description.paragraphs" :key="p">
+          {{p}}
+        </p>
+      </template>
+      
+      <div style="height:100px;"></div>
+
+      <template  v-if="pname.description.steps.length">
+        <div v-for="(s, i) in pname.description.steps" :key="i">
+           <p style="margin-left:15%; font-weight:bold;">Step {{i + 1}} :</p>
+          <template v-if="s.image">
+            <v-img       
+              eager="true"
+              :src="s.image"
+              style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999" 
+            ></v-img>
+          </template>
+        </div>       
+      </template>
+     
       <p class="content" style="margin:16px auto; text-align:center; ">
         Feel free to give your suggestions or feedback in the following link or
         mail us at <a href="info@decabits.com">info@decabits.com</a>

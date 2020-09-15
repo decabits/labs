@@ -43,7 +43,7 @@
           <Cards
             v-on:cardClicked="onchildClick"
             v-on:AllItems="storeData"
-            :Itemfilter="filteredItems"
+            :Itemfilter="cardData"
             v-on:AllTags="storeTags"
           />
         </a>
@@ -148,6 +148,8 @@ import Cards from "./Cards";
 import Projectdescription from "./Projectdescription";
 import comments from "./comments";
 
+import cardData from '../constants/cardData.js'
+
 export default {
   name: "Home",
   components: {
@@ -243,10 +245,8 @@ export default {
     onchildClick(value) {
       document.getElementById("pdesc").style.display = "";
       document.getElementById("cmnt").style.display = "";
+      this.singleItem = value.item;
       console.log(this.singleItem);
-      this.singleItem.pname = value.item.pname;
-      this.singleItem.img = value.item.img;
-      this.singleItem.description = value.item.description;
     },
     storeData(e) {
       this.cardData = e;
@@ -267,7 +267,7 @@ export default {
     text: "Message sent Successfully! ",
     search: "",
     tagData: [],
-    cardData: [],
+    cardData,
     singleItem: {
       pname: "",
       img: "",
