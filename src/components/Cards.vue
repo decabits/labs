@@ -35,15 +35,7 @@
                 </v-chip-group>
               </v-card-text> 
               <v-card-actions>
-                <!-- <v-btn
-                  style="border-radius:11px"
-                  color="#2496FF"
-                  dark
-                  text
-                  @click="reserve({ item })"
-                >
-                  Read More
-                </v-btn> -->
+                
               </v-card-actions> 
             </v-card>
           </v-hover>
@@ -62,21 +54,7 @@ export default {
     },
   },
   mounted() {
-    // setTimeout(() => {
-    //   console.log("3s elapsed!");
-    //   document.getElementById("crd").style.display == "none"
-    //     ? (document.getElementById("crd").style.display = "")
-    //     : null;
-    //   document.getElementById("skl").style.display == ""
-    //     ? (document.getElementById("skl").style.display = "none")
-    //     : null;
-    // }, 3000),
-    //   setTimeout(() => {
-    //     this.$emit("AllItems", this.items);
-    //   }, 0),
-    //   setTimeout(() => {
-    //     this.$emit("AllTags", this.items.tags);
-    //   }, 0);
+    
   },
   props: {
     Itemfilter: Array,

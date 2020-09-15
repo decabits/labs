@@ -5,9 +5,7 @@ import logomakermainimg from "../assets/Labdecabits_Labdecabits.png";
 import lmStep1 from "../assets/gif1.gif";
 import lmStep2 from "../assets/gif2.gif";
 import lmStep3 from "../assets/gif3.gif";
-import lmstep1 from "../assets/Gif1trapper.gif";
-import lmstep2 from "../assets/Gif2trapper.gif";
-import lmstep3 from "../assets/Gif3trapper.gif";
+import lmstep1 from "../assets/NT_gif.gif";
 
 
 
@@ -89,12 +87,7 @@ export default [
                 {
                     image: lmstep1
                 },
-                {
-                    image: lmstep2
-                },
-                {
-                    image: lmstep3
-                }
+                
             ]
         }
       },
