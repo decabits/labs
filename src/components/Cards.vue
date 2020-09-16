@@ -2,16 +2,20 @@
   <div class="cards">
     <b-container id="crd" fluid>
       <v-row>
-        <v-col cols="6" sm="4" v-for="(item, i) in Itemfilter" :key="i">
+      
+        <v-col cols="12" sm="4" v-for="(item, i) in Itemfilter" :key="i"
+        >
           <v-hover v-slot:default="{ hover }" close-delay="200">
             <v-card
               :elevation="hover ? 16 : 2"
               :loading="loading"
               class="mx-auto my-12"
               max-width="420"
+              height="80%"
               style="border-radius:16px;"
               @click="reserve({ item })"
             >
+          
               <div class="logoimage">
                 <v-img v-bind:src="item.img" aspect-ratio="2"> </v-img>
               </div>
@@ -35,7 +39,15 @@
                 </v-chip-group>
               </v-card-text> 
               <v-card-actions>
-                
+                <!-- <v-btn
+                  style="border-radius:11px"
+                  color="#2496FF"
+                  dark
+                  text
+                  @click="reserve({ item })"
+                >
+                  Read More
+                </v-btn> -->
               </v-card-actions> 
             </v-card>
           </v-hover>
@@ -54,7 +66,21 @@ export default {
     },
   },
   mounted() {
-    
+    // setTimeout(() => {
+    //   console.log("3s elapsed!");
+    //   document.getElementById("crd").style.display == "none"
+    //     ? (document.getElementById("crd").style.display = "")
+    //     : null;
+    //   document.getElementById("skl").style.display == ""
+    //     ? (document.getElementById("skl").style.display = "none")
+    //     : null;
+    // }, 3000),
+    //   setTimeout(() => {
+    //     this.$emit("AllItems", this.items);
+    //   }, 0),
+    //   setTimeout(() => {
+    //     this.$emit("AllTags", this.items.tags);
+    //   }, 0);
   },
   props: {
     Itemfilter: Array,
@@ -68,4 +94,15 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.cards{
+  display:flex;
+}
+@media only screen and (max-width: 400px){
+  .cards{
+    display:flex;
+    flex-direction:column;
+
+  }
+}
+</style>

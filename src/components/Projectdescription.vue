@@ -2,7 +2,7 @@
   <div class="project">
     <b-container fluid style="margin-top:50px; width:90%;">
       <v-row>
-        <v-col cols="6">
+        <v-col cols="12" sm="4">
           <h3 class="headingPr">{{ pname.pname }}</h3>
           <v-card style="border-radius:11px 11px 0px 0px; ">
             <v-img
@@ -21,8 +21,8 @@
         <v-col cols="6" style="position:relative">
           <div class="infoSection">
             <div>
-              <p>{{pname.website}}</p>
-              <a
+              <p class="pwebsite">{{pname.website}}</p>
+              <a class="pwebsitelink"
                 style="color:#2496FF"
                 :href="pname.websitelink"
                 target="_blank"
@@ -30,28 +30,30 @@
               >
             </div>
             <div v-if="pname.categories">
-              <p>Category:</p>
-      
-              <p>{{pname.categories}}</p>
+              <p class="pcat">Category:</p>
+              <p class="pcatlist">{{pname.categories}}</p>
             </div>
            
             <div v-if="pname.tags">
-              <p>Tags:</p>
-              <p>{{pname.tags.join(', ')}}</p>
+              <p class="ptags">Tags:</p>
+              <p class="ptaglist">{{pname.tags.join(', ')}}</p>
             </div>
             <div>
-              <p>Share:</p>
-              <a
+              <p class="pshare">Share:</p>
+              <a 
+              class="psharelink"
                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fdecabits%2F&amp;src=sdkpreparse"
                 target="_blank"
                 ><i class="fab fa-facebook"></i
               ></a>
               <a
+              class="psharelink"
                 href="https://twitter.com/intent/tweet?text=Checkout this awesome development tool-Logo Maker- at https://labs.decabits.com/"
                 target="_blank"
                 ><i class="fa fa-twitter"></i
               ></a>
               <a
+              class="psharelink"
                 href="https://api.whatsapp.com/send?phone=+91999925147&text=Checkout this awesome development tool-Logo Maker- at https://labs.decabits.com/"
                 target="_blank"
                 ><i style="color:#4FCE5D" class="fab fa-whatsapp"></i>
@@ -80,7 +82,7 @@
 
       <template  v-if="pname.description.steps.length">
         <div v-for="(s, i) in pname.description.steps" :key="i">
-           <p style="margin-left:15%; font-weight:bold;">Step {{i + 1}} :</p>
+          <p style="margin-left:15%; font-weight:bold;">Step {{i + 1}} :</p>
           <template v-if="s.image">
             <v-img       
               eager="true"
@@ -179,6 +181,24 @@
 .v-image__image {
   background-size: contain !important;
 }
+@media only screen and (max-width: 400px){
+  .pwebsite, .pwebsitelink , .pcat, .pcatlist, .ptags, .ptaglist, .pshare, .psharelink{
+    font-size:4vw;
+  }
+  .infoSection{
+    display:flex;
+    flex-direction:column;  
+    margin-top:40px;
+    justify-content:center;
+    margin-left:47px;
+    margin-bottom:20px;
+  }
+  .desc{
+    margin-top: 110px;
+    text-align: justify;
+  }
+
+  }
 
 </style>
 <script>
@@ -202,4 +222,5 @@ export default {
     },
   },
 };
+
 </script>
