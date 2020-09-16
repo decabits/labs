@@ -82,7 +82,7 @@
 
       <template  v-if="pname.description.steps.length">
         <div v-for="(s, i) in pname.description.steps" :key="i">
-          <p style="margin-left:15%; font-weight:bold;">Step {{i + 1}} :</p>
+          <!--<p style="margin-left:15%; font-weight:bold;">Step {{i + 1}} :</p>-->
           <template v-if="s.image">
             <v-img       
               eager="true"
