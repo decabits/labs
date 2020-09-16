@@ -5,7 +5,7 @@ import logomakermainimg from "../assets/Labdecabits_Labdecabits.png";
 import lmStep1 from "../assets/gif1.gif";
 import lmStep2 from "../assets/gif2.gif";
 import lmStep3 from "../assets/gif3.gif";
-import lmstep1 from "../assets/NT_gif.gif";
+import lmstep1 from "../assets/NT gif.gif";
 
 
 
@@ -71,7 +71,7 @@ export default [
         categories: "NotificationTrapper , Web Service",
         review: ["Good", "Awesome", "Loved it", "Not Good"],
         website:"website:",
-        websitelink:"notification-trapper.herokuapp.com/",
+        websitelink:"http://notification-trapper.herokuapp.com/",
         description: {
             mainImage: ntmainimage,
             paragraphs: [
@@ -87,7 +87,6 @@ export default [
                 {
                     image: lmstep1
                 },
-                
             ]
         }
       },
