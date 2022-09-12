@@ -42,4 +42,33 @@
 .Parent {
   position: relative;
 }
+@media only screen and (max-width: 400px){
+  .text {
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 66px;
+  display: flex;
+  align-items: center;
+}
+.para {
+  position: absolute;
+  top: 45%;
+  width: 90%;
+  left: 8%;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555555;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 0.825rem;
+  margin-top: 30px;
+  line-height: 1.2rem;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+}
 </style>

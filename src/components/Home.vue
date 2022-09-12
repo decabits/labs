@@ -24,7 +24,7 @@
         /> -->
         <v-btn
           @click="showContact()"
-          style="  width:150px; height:40px; margin: 0 20px !important; font-size:16px;"
+          style="  max-width:150px; height:40px; margin: 0 20px 0 0 !important; font-size:16px;"
           class="ma-2 showcontact"
           dark
           small
@@ -33,8 +33,10 @@
         >
       </v-app-bar>
       <v-content>
+        <div class="bannerContainer" >
         <Banner v-on:bannerClicked="reachusbanner" />
-        <Textarea />
+        </div>
+          <Textarea />
         <a
           href="#desc"
           v-smooth-scroll="{ duration: 1000 }"
@@ -270,6 +272,7 @@ export default {
     cardData,
     singleItem: {
       pname: "",
+      launchDate: "",
       img: "",
       description: "",
     },
@@ -361,6 +364,12 @@ export default {
     top: 50%;
     left: 30% !important;
     transform: translate(50%,-50%);
+  }
+  .bannerContainer{
+    height: 20vh;
+  }
+  .Parent{
+    margin-bottom: 25px;
   }
 }
 </style>

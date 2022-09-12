@@ -13,33 +13,34 @@ export default [
     {
         img: logomakerimage,
         pname: "Logo Maker",
+        launchDate: "Launching Date - 25 June 2020",
         rating: 4,
         numberOfPeopleRated: 143,
         tagline: "Make your own unique logo for free ",
         tags: ["Vue.js", "HTML", "CSS", "Fabric.js"],
         categories: "Logomaker , Web Service",
         review: ["Good", "Awesome", "Loved it", "Not Good"],
-        website:"website:",
+        website:"Website:",
         websitelink:"https://logomaker.decabits.com/",
          
         description: {
             mainImage: logomakermainimg,
             paragraphs: [
                 `Our foremost project at labs decabits is created with a vision to help
-                other startups to flourish & grow with minimal investment. To begin
+                other startups to flourish & grow with minimal investment which was launched in 25 June 2020. To begin
                 with, we want to provide our customers with utmost convenience.`,
-                `Any consumer who wants to explore & design logomakes can begin with
+                `Any consumer who wants to explore & design Logomaker can begin with
                 selecting/outlining a company name followed by picking fonts & case. The
                 next step for creating the perfect trademark is connecting symbolic
                 shades & colors to it. Move further by determining & specifying
                 meaningful icons for a pleasing layout.`,
                 `Our high tech team of designers & developers have collaborated to
-                fabricate the flawless logomakes. With frontend technology like Vue.JS,
+                fabricate the flawless Logomaker. With frontend technology like Vue.JS,
                 HTML & CSS- the project was set up & completed with precision & fruitful
                 results. Apart from the basic technologies & coding, a very special part
                 & copart of this project is contributed by an inbuilt canvas library
                 called Fabric.JS. A powerful & simple library to build SVGs. With an
-                easy yet robust tech stack, Labs.decabits delivered its very first open
+                easy yet robust tech stack, Labs. Decabits delivered its very first open
                 source tool for going live.`,
                 `A noteworthy detail & feature makes its free download service of the
                 logos, in all formats like PNG, JPEG & SVG (With or without background)`,
@@ -64,18 +65,19 @@ export default [
       {
         img: ntimage,
         pname: "Notification trapper",
+        launchDate: "Launching Date -  23 June 2020",
         rating: 4,
         numberOfPeopleRated: 143,
         tagline: "One Stop Solution for Accessing all your Testing Emails! ",
         tags: ["E-mail", "SMS", "Inbox"],
         categories: "NotificationTrapper , Web Service",
         review: ["Good", "Awesome", "Loved it", "Not Good"],
-        website:"website:",
+        website:"Website:",
         websitelink:"http://notification-trapper.herokuapp.com/",
         description: {
             mainImage: ntmainimage,
             paragraphs: [
-                `Notification Trapper by Decabits, is a self-curated tool by this startup based in New Delhi focussing to provide an easy to use tool for testing SMS/email before sending out the real text message. The tool provides robust functionality of rerouting all testing mails & messages to the notification trapper’s inbox.
+                `Notification Trapper by Decabits which was launched in 23 June 2020, is a self-curated tool by this startup based in New Delhi focussing to provide an easy to use tool for testing SMS/email before sending out the real text message. The tool provides robust functionality of rerouting all testing mails & messages to the notification trapper’s inbox.
                 `,
                 `The tool is free of charge for storing up to 1000 mails/SMS. It provides a dedicated & safe environment during staging and/or development for email and SMS testing with proficiency. `,
                 `It avoids sending test email/SMS to a real user inbox. So, perfectly crafted templates reach your clients giving an edge cutting highlight to your functionality. 

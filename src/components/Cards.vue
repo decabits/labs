@@ -20,6 +20,7 @@
                 <v-img v-bind:src="item.img" aspect-ratio="2"> </v-img>
               </div>
               <v-card-title style="display:flex; justify-content:left;">{{ item.pname }}</v-card-title>
+              <p style="font-weight:bold; display:flex; justify-content:left; padding-left: 16px; margin-top: -15px; margin-bottom: -15px;">{{ item.launchDate }}</p>
               <v-card-text>
                 <v-row align="left" class="mx-0">
                   <div class="grey--text ml-4"></div>
