@@ -2,7 +2,7 @@
   <div class="project">
     <b-container fluid style="margin-top:50px; width:90%;">
       <v-row>
-        <v-col cols="12" sm="4">
+        <v-col class="projectDescription"  cols="12" sm="4">
           <h3 class="headingPr">{{ pname.pname }}</h3>
           <v-card style="border-radius:11px 11px 0px 0px; ">
             <v-img
@@ -196,6 +196,9 @@
   .desc{
     margin-top: 110px;
     text-align: justify;
+  }
+  .projectDescription{
+    margin-top: -35px;
   }
 
   }

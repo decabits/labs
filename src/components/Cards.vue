@@ -3,7 +3,7 @@
     <b-container id="crd" fluid>
       <v-row>
       
-        <v-col cols="12" sm="4" v-for="(item, i) in Itemfilter" :key="i"
+        <v-col class="productCard" cols="12" sm="4" v-for="(item, i) in Itemfilter" :key="i"
         >
           <v-hover v-slot:default="{ hover }" close-delay="200">
             <v-card
@@ -104,6 +104,9 @@ export default {
     display:flex;
     flex-direction:column;
 
+  }
+  .productCard{
+    margin-bottom: -80px;
   }
 }
 </style>

@@ -45,7 +45,7 @@
 @media only screen and (max-width: 400px){
   .text {
   position: absolute;
-  top: 30%;
+  top: 10%;
   left: 8%;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -57,7 +57,7 @@
 }
 .para {
   position: absolute;
-  top: 45%;
+  top: 35%;
   width: 90%;
   left: 8%;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
