@@ -186,7 +186,7 @@ export default {
     },
     submitData(e) {
       e.preventDefault();
-
+      let newData = {}
       if (this.form.name == "") {
         console.log("name empty");
         this.errors.name = "Name field is required!";
@@ -220,25 +220,24 @@ export default {
         this.errors.message == "" &&
         this.validEmail()
       ) {
-        let newData = {
-          your_name: this.form.name,
-          contact_submitted: this.form.phone ? "yes" : "no",
-          your_email: this.form.email,
-          your_message: this.form.message + "\n" + this.form.phone,
-        };
-        this.axios
-          .post("https://blog.entnetwrk.com/contact.php", newData, {
+         newData = {
+          subject: "Website Contact Form: " + `${this.form.name.charAt(0).toUpperCase() + this.form.name.toString().slice(1)}`,
+          text: `You have received a new message from DecabitsLab .\n\nHere are the details:\n\nName: ${this.form.name.charAt(0).toUpperCase() + this.form.name.toString().slice(1)}\n\nMobile: ${this.form.phone}\n\nEmail: ${this.form.email}\n\nMessage:\n${this.form.message}`,
+          to: "info@decabits.com",
+          from: `"DecabitsLab" info@decabits.com`
+        };                   
+         this.axios
+          .post("https://db-node-mail-service.herokuapp.com/api/email", newData, {
             headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
+              "Content-Type": "application/json",
             },
           })
           .then((res) => {
             this.snackbar = true;
+            this.$refs["my-modal"].hide()
             console.log(res.data);
           });
       }
-
-      console.log(this.form);
     },
     showContact() {
       this.$refs["my-modal"].show();
