@@ -23,7 +23,7 @@
             <div>
               <p class="pwebsite">{{pname.website}}</p>
               <a class="pwebsitelink"
-                style="color:#2496FF"
+                style="color:#2496FF;"
                 :href="pname.websitelink"
                 target="_blank"
                 >{{pname.websitelink}}</a
@@ -68,7 +68,7 @@
       <template v-if="pname.description.mainImage">
         <v-img       
           :src="pname.description.mainImage"
-          style="height:60%; width:60%; margin:0 auto; "
+          style="height:60%; width:60%; margin:0 auto; margin-bottom:5vh !important; "
         ></v-img>
       </template>
 
@@ -93,7 +93,7 @@
         </div>       
       </template>
      
-      <p class="content" style="margin:16px auto; text-align:center; ">
+      <p class="content" style="margin:16px auto; text-align:center; margin-bottom:0; ">
         Feel free to give your suggestions or feedback in the following link or
         mail us at <a href="info@decabits.com">info@decabits.com</a>
       </p>
@@ -107,6 +107,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+body {
+  background-color: #000 !important;
+}
 .comments {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -124,14 +127,17 @@
   margin-top: 50px;
   margin-left: 100px;
   width: 90%;
-  color: #333333;
+  color: #fff;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 4vh;
 }
 .headingPr {
-  color: #333333;
+  /* color: #333333; */
+  color: #fff;
   font-size: 40px;
   font-weight: bold;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 4vh;
 }
 .rate {
   color: #333333;
@@ -150,7 +156,8 @@
   width: 85%;
   font-size: 18px;
   font-style: normal;
-  color: #555555;
+  /*color: #555555; */
+  color: #fff;
   font-weight: lighter;
 }
 
@@ -167,7 +174,7 @@
   font-size: 1.3vw;
 }
 .infoSection div p:first-child {
-  color: black;
+  color: #fff;
 }
 
 .infoSection p {
@@ -190,12 +197,13 @@
     flex-direction:column;  
     margin-top:40px;
     justify-content:center;
-    margin-left:47px;
+    margin-left:20vw;
     margin-bottom:20px;
   }
   .desc{
     margin-top: 110px;
     text-align: justify;
+    width: fit-content;
   }
   .projectDescription{
     margin-top: -35px;

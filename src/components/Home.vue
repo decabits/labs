@@ -1,279 +1,201 @@
 <template>
-  <div class="home" id="Home">
-    <v-app>
-      <v-app-bar color="FFFFFF" fixed>
-        <v-img
-          style="margin-right:68%; cursor:pointer;"
-          src="../assets/Labdecabits_logo.svg"
-          max-height="60"
-          contain
-          position="none"
-          class="icon"
-          @click="logoopen()"
-        >
-        </v-img>
-        <!-- <v-text-field
-          style="border-radius:11px;"
-          flat
-          solo
-          hide-details
-          prepend-inner-icon="mdi-magnify"
-          label="Search.."
-          v-model="search"
-          class="searchbox"
-        /> -->
-        <v-btn
-          @click="showContact()"
-          style="  max-width:150px; height:40px; margin: 0 20px 0 0 !important; font-size:16px;"
-          class="ma-2 showcontact"
-          dark
-          small
-          color="#070785"
-          >Contact Us</v-btn
-        >
-      </v-app-bar>
-      <v-content>
-        <div class="bannerContainer" >
-        <Banner v-on:bannerClicked="reachusbanner" />
+  <div>
+    <div class="topnav">
+      <img src="../assets/Labdecabits_logo.svg" id="labsLogo" />
+      <a style="  max-width:250px; height:30px; margin: 0 20px 0 0 !important;
+      color:#000;
+      align-self: center;
+    font-size:100%;
+    font-weight:400;
+    border: 1px solid #000;
+    padding: 0 4%;
+    border-style:inset;
+    cursor:pointer;
+    text-decoration:none;
+      "
+          href="#contactus" > Contact Us </a>
+    </div>
+    <div id="headerContainer">
+    <video autoplay muted loop id="bgVideo">
+      <source src="../assets/matrix_bg.mp4" type="video/mp4">
+    </video>
+      <div id="innrContainer">
+        <h6 style="font-size:1.15rem; font-weight: 200;">Decabits Software</h6>
+        <div id="divider1"></div>
+        <div style="margin-top: 30px; margin-bottom: 30px">
+          <h3 id="welcomeTxt">Welcome to</h3>
+          <h3 id="welcomeTxt1">
+            Lab Decabits
+          </h3>
+          <br />
+          <p id="headerPara">
+            Your self designed laboratory to create richly detailed, open-source & effective tools. Brainstorming,
+            finding ideas & experimenting with the latest tech stack is now a click away. Quench your knowledge thirst
+            in 3,2,1! tab to click
+          </p>
+          <br />
+          <a class="learnMoreBtn" href="#logoMakerSectionContainer">Learn More</a>
         </div>
-          <Textarea />
-        <a
-          href="#desc"
-          v-smooth-scroll="{ duration: 1000 }"
-          style="text-decoration:none;"
-        >
-          <Cards
-            v-on:cardClicked="onchildClick"
-            v-on:AllItems="storeData"
-            :Itemfilter="cardData"
-            v-on:AllTags="storeTags"
+      </div>
+    </div>
+    <section id="logoMakerSectionContainer">
+      <v-card class="mx-auto logoMakerSection">
+         <v-img src="../assets/logoMakerPoster.png" class="bannerImages" ></v-img>
+        <section class="logoMakerSectionRight">
+          <v-card-title>
+            <h4 class="descriptionHeading">
+              Decabits LogoMaker
+            </h4>
+          </v-card-title>
+          <v-card-title>
+            <h1 class="descriptionSubHeading">
+              Logos that fits <br />
+              everywhere!
+            </h1>
+          </v-card-title>
+          <br />
+          <v-card-subtitle style="color: #fff; margin-top:-25px">
+            <a id="startNowBtn" href="https://logomaker.decabits.com/" target="blank" >Start Now</a>
+            <br />
+          </v-card-subtitle>
+          <v-card-subtitle style="color: #fff;">
+            If you're on our website, you're in exactly the right place! We create logos using Logo Maker to build your
+            brand identity even if you are a small business or consumer.
+            <br />
+            <br />
+            <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showLogoMaker, showNotification,'showLogoMaker', 'showNotification')"> -->
+               <a style="color: white; text-decoration: underline;font-weight: 700;" href="#showLogoMaker" @click="showFields(showLogoMaker, showNotification,'showLogoMaker', 'showNotification')" >Learn More</a>
+            <!-- </v-btn> -->
+          </v-card-subtitle>
+        </section>
+      </v-card>
+    </section>
+    <section id='notificationSectionContainer'>
+      <v-card class="mx-auto d-flex flex-md-row flex-column logoMakerSection">
+        <section class="notificationSectionLeft">
+          <v-card-title>
+            <h4 style="font-weight: 400;">
+              Decabits Lab
+            </h4>
+          </v-card-title>
+          <v-card-title>
+            <h1 class="descriptionSubHeading" >
+              Notification <br />
+              Trapper
+            </h1>
+          </v-card-title>
+          <br />
+          <v-card-subtitle  style="color: #fff; margin-top:-25px">
+            <a id="startNowBtn" href="http://notification-trapper.herokuapp.com/" target="blank" >Start Now</a>
+            <br />
+          </v-card-subtitle>
+          
+          <v-card-subtitle style="color: #fff; ">
+            Notification Trapper by Decabits, is a self-curated tool by this startup based in New Delhi focussing to
+            provide an easy to use tool for testing SMS/email before sending out the real text message.
+            <br />
+            <br />
+             <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showNotification, showLogoMaker, 'showNotification', 'showLogoMaker')"> -->
+                <a style="color: white; text-decoration: underline;font-weight: 700; padding-top:20px;" href="#showNotification" @click="showFields(showNotification, showLogoMaker, 'showNotification', 'showLogoMaker')" >Learn More</a>
+            <!-- </v-btn> -->
+          </v-card-subtitle>
+        </section>
+          <v-img src="../assets/logoMakerPoster.png" class="bannerImages" ></v-img>
+      </v-card>
+    </section>
+    <br/>
+    <br/>
+    <div id="descriptionContainer"  style="background-color: #000" >
+      <Projectdescription
+            :pname="cardData[0]"
+            style="display:none; background-color: #0000 !important"
+            id="showLogoMaker"
           />
-        </a>
-        <div id="desc" style="height:20px;"></div>
-        <Projectdescription
-          :pname="singleItem"
-          style="display:none;"
-          id="pdesc"
-        />
-        <comments style="display:none;" id="cmnt" />
-      </v-content>
-    </v-app>
-    <router-view />
-    <b-modal
-      class="contactUS"
-      ref="my-modal"
-      size="md"
-      centered
-      hide-footer
-      title="Contact Us !"
-    >
-      <div class="d-block text-center">
-        <p>
-          Want to discuss some work?<br />
+      <Projectdescription
+        :pname="cardData[1]"
+        style="display:none; background-color: #0000 !important"
+        id="showNotification"
+      />
+    
+    </div>
+    <br/>
+    <br/>
+    <section id="contactus">
+      <h3 style="font-size: 3.05rem; color: #fff; font-weight: 400; text-align: center; margin-bottom: 50px">
+        You deserve the <span style="color: red;">best.</span>
+      </h3>
+      <v-card class="mx-auto" max-width="700" height="auto" style="background-color: #0A0A0A; color: #fff">
+        <v-card-title class="p-4" style="font-size: 1.60rem;font-weight: 400; display: flex; justify-content: center;">
+          Contact Us
+          <br />
+        </v-card-title>
+        <v-card-subtitle style="color: #fff; display: flex; justify-content: center; padding-bottom:0; ">
+          Want to discuss some work?
+        </v-card-subtitle>
+        <v-card-subtitle class="w-100" style="color: #fff; display: flex; justify-content: center; padding:0; ">
           Just drop a message below or mail us at
-          <a href="info@decabits.com">info@decabits.com</a>
-        </p>
-      </div>
-      <form ref="form" @submit="submitData" class="contactModal">
-        <div>
-          <b-form-input
-            id="your_name"
-            v-model="form.name"
-            placeholder="Name"
-            style="width:100%;"
-          ></b-form-input>
-          <p class="validate">{{ errors.name }}</p>
+          <a href="https://info@decabits.com" target="blank" class="pl-sm-4" >info@decabits.com </a>
+        </v-card-subtitle>
 
-          <b-form-input
-            id="your_email"
-            v-model="form.email"
-            placeholder="  Email"
-            style="width:100%;"
-          ></b-form-input>
-          <p class="validate">{{ errors.email }}</p>
-          <b-form-input
-            id="phone-input"
-            v-model="form.phone"
-            placeholder=" Phone No."
-            style="width:100%;"
-          ></b-form-input>
-          <p class="validate">{{ errors.phone }}</p>
-        </div>
-        <div>
-          <b-form-textarea
-            id="message"
-            v-model="form.message"
-            placeholder="Your message..."
-            rows="5"
-            style="width:100%;"
-          ></b-form-textarea>
-          <p class="validate">{{ errors.message }}</p>
-        </div>
-        <b-button
-          type="submit"
-          style="margin:auto;display:flex"
-          variant="primary"
-          >Submit</b-button
-        >
-      </form>
+        <section>
+          <br />
+          <br />
+          <v-form ref="form" @submit="submitData">
+            <v-container>
+              <v-row justify="center" class="p-sm-4">
+                <v-col cols="12" md="6">
+                  <v-text-field placeholder="Name" class="contInput" v-model="form.name" required></v-text-field>
+                  <p class="validate">{{ errors.name }}</p>
+                  <v-text-field placeholder="Email" class="contInput" v-model="form.email" required></v-text-field>
+                  <p class="validate">{{ errors.email }}</p>
+                  <v-text-field placeholder="Phone No.." class="contInput" v-model="form.phone" required></v-text-field>
+                  <p class="validate">{{ errors.phone }}</p>
+                </v-col>
 
-      <div
-        style="margin-top:20px;  width:100%; justify-content:center; display:flex"
-      >
-        <a href="https://www.linkedin.com/company/decabits/" target="_blank"
-          ><i
-            class="fab fa-linkedin fa-2x"
-            style="margin:5px 5px; color: #0077B7"
-          ></i
-        ></a>
-        <a href="https://github.com/decabits" target="_blank"
-          ><i
-            class="fab fa-github fa-2x"
-            style="margin:5px 5px; color:black;"
-          ></i
-        ></a>
-      </div>
-    </b-modal>
-    <v-snackbar v-model="snackbar">
-      {{ text }}
-      <v-btn color="pink" text @click="snackbar = false">
-        Close
-      </v-btn>
-    </v-snackbar>
+                <v-col cols="12" md="6">
+                  <v-textarea
+                    row="6"
+                    placeholder="Write your message..."
+                    class="contInputArea"
+                    v-model="form.message"
+                    required
+                  ></v-textarea>
+                  <p class="validate">{{ errors.message }}</p>
+                </v-col>
+              </v-row>
+              <b-button type="submit" style="margin:auto;display:flex" variant="primary">
+                Submit
+              </b-button>
+            </v-container>
+          </v-form>
+        </section>
+      </v-card>
+    </section>
   </div>
 </template>
 
 <script>
-import Banner from "./Banner";
-import Textarea from "./Textarea";
-import Cards from "./Cards";
+import axios from "axios";
 import Projectdescription from "./Projectdescription";
-import comments from "./comments";
-
 import cardData from '../constants/cardData.js'
-
 export default {
-  name: "Home",
-  components: {
-    Banner,
-    Textarea,
-    Cards,
+  name: "Home1",
+  components:{
     Projectdescription,
-    comments,
   },
-  methods: {
-    reachusbanner(value) {
-      console.log("Helloooooooo = " + value);
-      this.$refs["my-modal"].show();
-    },
-    logoopen() {
-      window.open("https://labs.decabits.com/","_self");
-    },
-    Onchange(e) {
-      console.log(e.target.value);
-    },
-    validEmail() {
-      const text = this.form.email;
-      let reg = /^\w+([.-/+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-      if (reg.test(text)) {
-        document.getElementById("your_email").style.borderColor = "green";
-        return true;
-      } else {
-        this.errors.email = "Please enter valid email address";
-        document.getElementById("your_email").style.borderColor = "red";
-        return false;
-      }
-    },
-    submitData(e) {
-      e.preventDefault();
-      let newData = {}
-      if (this.form.name == "") {
-        console.log("name empty");
-        this.errors.name = "Name field is required!";
-        document.getElementById("your_name").style.borderColor = "red";
-      }
-      if (this.form.email.toString() == "") {
-        this.errors.email = "Email field is required!";
-      } else {
-        this.errors.email = "";
-        document.getElementById("your_email").style.borderColor = "green";
-      }
-      if (this.form.phone.toString() == "") {
-        this.errors.phone = "Phone field is required!";
-        document.getElementById("phone-input").style.borderColor = "red";
-      } else {
-        this.errors.phone = "";
-        document.getElementById("phone-input").style.borderColor = "green";
-      }
-      if (this.form.message.toString() == "") {
-        this.errors.message = "Message field is required!";
-        document.getElementById("message").style.borderColor = "red";
-      } else {
-        this.errors.message = "";
-        document.getElementById("message").style.borderColor = "green";
-      }
-
-      if (
-        this.errors.name == "" &&
-        this.errors.email == "" &&
-        this.errors.phone == "" &&
-        this.errors.message == "" &&
-        this.validEmail()
-      ) {
-         newData = {
-          subject: "Website Contact Form: " + `${this.form.name.charAt(0).toUpperCase() + this.form.name.toString().slice(1)}`,
-          text: `You have received a new message from DecabitsLab .\n\nHere are the details:\n\nName: ${this.form.name.charAt(0).toUpperCase() + this.form.name.toString().slice(1)}\n\nMobile: ${this.form.phone}\n\nEmail: ${this.form.email}\n\nMessage:\n${this.form.message}`,
-          to: "info@decabits.com",
-          from: `"DecabitsLab" info@decabits.com`
-        };                   
-         this.axios
-          .post("https://db-node-mail-service.herokuapp.com/api/email", newData, {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
-          .then((res) => {
-            this.snackbar = true;
-            this.$refs["my-modal"].hide()
-            console.log(res.data);
-          });
-      }
-    },
-    showContact() {
-      this.$refs["my-modal"].show();
-    },
-
-    onchildClick(value) {
-      document.getElementById("pdesc").style.display = "";
-      document.getElementById("cmnt").style.display = "";
-      this.singleItem = value.item;
-      console.log(this.singleItem);
-    },
-    storeData(e) {
-      this.cardData = e;
-    },
-    storeTags(e) {
-      this.tagData = e;
-    },
-  },
-
   data: () => ({
+    showNotification: false,
+    showLogoMaker: false,
+    allowSpaces: false,
+    cardData,
+    match: "Foobar",
+    max: 0,
+    model: "Foobar",
     errors: {
       name: "",
       email: "",
       phone: "",
       message: "",
-    },
-    snackbar: false,
-    text: "Message sent Successfully! ",
-    search: "",
-    tagData: [],
-    cardData,
-    singleItem: {
-      pname: "",
-      launchDate: "",
-      img: "",
-      description: "",
     },
     form: {
       name: "",
@@ -281,71 +203,306 @@ export default {
       message: "",
       phone: "",
     },
-    drawer: false,
-    // item: 1,
-    items: [
-      { icon: "mdi-home", route: "/", name: "home" },
-      { icon: "mdi-account", name: "contactus" },
-      { icon: "mdi-cogs", route: "/services", name: "services" },
-    ],
   }),
-  computed: {
-    filteredItems: function() {
-      return this.cardData.filter((d) => {
-        return d.pname.toLowerCase().match(this.search.toLowerCase());
-      });
+  methods: {
+    showFields(e,previousE,currentClassName, prevClassName){
+      try {        
+        this.e = !e
+        this.previousE = !previousE;
+        let preBlog = document.getElementById(prevClassName)
+        preBlog.style.display = "none"
+        let blog = document.getElementById(currentClassName)
+        blog.style.display = "block"
+      } catch (error) {
+        window.console.log(error)
+      }
+      
     },
+    validateField() {
+      this.$refs.form.validate();
+    },
+    validEmail() {
+      const text = this.form.email;
+      let reg = /^\w+([.-/+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+      if (reg.test(text)) {
+        return true;
+      } else {
+        this.errors.email = "Please enter valid email address";
+        return false;
+      }
+    },
+    submitData(e) {
+      e.preventDefault();
+      let newData = {};
+      if (this.form.name == "") {
+        this.errors.name = "Name field is required!";
+      }
+      if (this.form.email.toString() == "") {
+        this.errors.email = "Email field is required!";
+      } else {
+        this.errors.email = "";
+      }
+      if (this.form.phone.toString() == "") {
+        this.errors.phone = "Phone field is required!";
+      } else {
+        this.errors.phone = "";
+      }
+      if (this.form.message.toString() == "") {
+        this.errors.message = "Message field is required!";
+      } else {
+        this.errors.message = "";
+      }
+      if (
+        this.errors.name == "" &&
+        this.errors.email == "" &&
+        this.errors.phone == "" &&
+        this.errors.message == "" &&
+        this.validEmail()
+      ) {
+        newData = {
+          subject:
+            "Website Contact Form: " + `${this.form.name.charAt(0).toUpperCase() + this.form.name.toString().slice(1)}`,
+          text: `You have received a new message from DecabitsLab .\n\nHere are the details:\n\nName: ${this.form.name
+            .charAt(0)
+            .toUpperCase() + this.form.name.toString().slice(1)}\n\nMobile: ${this.form.phone}\n\nEmail: ${
+            this.form.email
+          }\n\nMessage:\n${this.form.message}`,
+          to: "info@decabits.com",
+          from: `"DecabitsLab" info@decabits.com`,
+        };
+        window.console.log(this.form.name, this.form.email, this.form.phone, this.form.message);
+        axios
+          .post("https://db-node-mail-service.herokuapp.com/api/email", newData, {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+          .then((res) => {
+            this.snackbar = true;
+            this.$refs["my-modal"].hide();
+            console.log(res.data);
+          });
+      }
+    },
+  },
+  computed: {
+    rules() {
+      const rules = [];
+
+      if (this.max) {
+        const rule = (v) => (v || "").length <= this.max || `A maximum of ${this.max} characters is allowed`;
+
+        rules.push(rule);
+      }
+
+      if (!this.allowSpaces) {
+        const rule = (v) => (v || "").indexOf(" ") < 0 || "No spaces are allowed";
+
+        rules.push(rule);
+      }
+
+      if (this.match) {
+        const rule = (v) => (!!v && v) === this.match || "Values do not match";
+
+        rules.push(rule);
+      }
+
+      return rules;
+    },
+  },
+
+  watch: {
+    match: "validateField",
+    max: "validateField",
+    model: "validateField",
   },
 };
 </script>
+
 <style>
-.navdrawer {
-  box-shadow: 2px 0px 4px rgba(78, 78, 78, 0.25);
-  border-radius: 0px;
-  border: 0;
+* {
+  scroll-behavior: smooth !important;
+  color: #fff;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
-.navicon {
-  transform: rotate(90deg);
-}
-.searchbox {
-  width: 324px;
-  height: 50px;
-  background: #fafafa;
-}
-.list {
-  width: 70%;
-  margin: 6px;
-}
-.icons {
-  margin-left: 90%;
-  margin-bottom: 18px;
-  color: #ffffff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
-}
-
-.icon {
-  margin-right: 55% !important;
-  height: 100%;
-  width: fit-content;
-}
-
-.contactModal input {
-  width: 60%;
-  margin: 10px auto;
-}
-.contactModal textarea {
-  width: 60%;
-  margin: 12px auto;
-}
-
-.modal-header h5 {
-  margin: 0 auto;
-}
-
-.close {
+#bgVideo{
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
   position: absolute;
-  right: 2%;
+  z-index: -1;
+}
+#descriptionContainer {
+  background-color: #000;
+  margin-top: -8%;
+  padding-top: 50px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #fff;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+#labsLogo {
+  height: 100px;
+  width: 150px;
+  margin-left: 60px;
+  margin-top: -8px;
+}
+#divider1 {
+  width: 520px;
+  background-color: #ffff;
+  height: 0.8px;
+}
+#welcomeTxt {
+  font-size: 2.95rem;
+  font-weight: 300;
+  margin: 0;
+}
+#welcomeTxt1 {
+  font-size: 2.75rem; 
+  font-weight: bolder; 
+  color: #f53535; 
+  margin-top:5px;
+  display:inline;
+  position:relative;
+}
+#welcomeTxt1::after{
+    content:'';
+    width: 7ch;
+    border-bottom: 3px solid yellow;
+    padding-bottom: 10px;
+    height: 26px;
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+}
+.bannerImages{
+  height: auto;
+  flex-basis:60%;
+  background-color: #000;
+  border-radius: 0 !important;
+}
+#headerPara {
+  max-width: 480px; 
+  font-size:1.05rem; 
+  margin-top: 50px; 
+  font-family: 'Segoe UI', sans-serif;
+}
+#headerContainer {
+  height: auto;
+  width: 100%;
+  min-height: 86vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000d;
+  color: #ffff;
+}
+
+#innrContainer {
+  padding: 125px 0 0px 60px;
+ 
+}
+
+.descriptionHeading {
+  font-size: 1.5rem; 
+  font-weight: 400;
+}
+
+.descriptionSubHeading{
+    line-height:4rem; 
+    font-weight: 400; 
+    font-size: 2.95rem; 
+    margin-top:-10px;
+}
+
+.learnMoreBtn {
+  padding: 8px 65px;
+  font-size: 1rem;
+  background-color: #0000;
+  border: 2px solid #fff;
+  border-style: inset;
+  color: #fff;
+  text-decoration: none;
+}
+.learnMoreBtn:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+#logoMakerSectionContainer{
+  background-color: #000; 
+  padding: 30px 60px;
+}
+
+#notificationSectionContainer{
+  background-color: #000; 
+  padding: 30px 80px 30px 5px;
+}
+
+#startNowBtn {
+  padding: 8px 85px;
+  font-size: 1rem;
+  background-color: #0000;
+  border: 2px solid #fff;
+  border-style: inset;
+  color: #fff;
+  text-decoration: none;
+}
+
+#contactus {
+  background-color: #000; 
+  padding:45px 55px; 
+  padding-bottom: 100px; 
+  margin-top:-60px;
+}
+
+.logoMakerSection {
+  display: flex;
+  background-color: #000 !important;
+  border: 0 !important;
+}
+.logoMakerSectionRight {
+  width: calc(100% - 540px) !important;
+  padding: 30px 30px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0 !important;
+}
+.notificationSectionLeft {
+  width: calc(100% - 540px) !important;
+  padding: 30px 30px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0 !important;
+}
+.contInput {
+  padding: 0;
+}
+.contInputArea,
+.v-text-field {
+  padding-top: 0 !important;
+}
+.v-text-field__slot > input,
+textarea {
+  color: #fff !important;
+  padding: 5px;
+  border: 1px solid #fff;
+}
+.v-text-field__slot > textarea {
+  color: #fff !important;
+  padding: 5px;
+  border: 1px solid #fff;
+  bottom: 50px;
+}
+.v-text-field__slot > input::placeholder,
+textarea::placeholder {
+  color: #9a9b9c !important;
 }
 .validate {
   width: 60%;
@@ -354,21 +511,191 @@ export default {
   margin: 0 auto;
   color: red;
 }
-@media only screen and (max-width: 400px){
-  .icon{
-    position: relative;
+@media only screen and (max-width: 900px) {
+  .topnav {
+    overflow: hidden;
+    background-color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
   }
-  .showcontact{
+  #labsLogo {
+    height: 30px;
+    width: 100px;
+    margin-left: 5px;
+  }
+  #divider1 {
+    width: 60vw;
+    background-color: #ffff;
+    height: 0.8px;
+  }
+  #welcomeTxt {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  #welcomeTxt1 {
+  font-size: 1.25rem; 
+  font-weight: bolder; 
+  color: #f53535; 
+  margin-top:5px;
+}
+
+#welcomeTxt1::after{
+    content:'';
+    width: 100%;
+    border-bottom: 3px solid yellow;
+    padding-bottom: 10px;
+    height: 26px;
     position: absolute;
-    top: 50%;
-    left: 30% !important;
-    transform: translate(50%,-50%);
+    bottom: -10%;
+    right: 0;
+}
+.bannerImages{
+  height: auto;
+  flex-basis:100%;
+  background-color: #000;
+  border-radius: 0 !important;
+  padding: 0 5%;
+}
+#headerPara {
+  max-width: 90%; 
+  font-size: 0.85rem; 
+  margin-top: 10px; 
+  font-family: 'Segoe UI', sans-serif;
+}
+
+  #headerContainer {
+    height: auto;
+    width: 100%;
+    min-height: 86vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000d;
+    color: #ffff;
   }
-  .bannerContainer{
-    height: 20vh;
+
+  #innrContainer {
+    padding: 80px 0 30px 30px;
+    /*background: rgb(0, 0, 0); /* Fallback color */
+    /*background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
   }
-  .Parent{
-    margin-bottom: 25px;
+
+  .descriptionHeading {
+    font-size: 1.15rem; 
+    font-weight: 400;
+}
+
+#descriptionContainer {
+  background-color: #000;
+  margin-top: -16%;
+}
+
+.descriptionSubHeading{
+    font-weight: 400; 
+    font-size: 1.65rem;
+    line-height: 1.3; 
+    margin-top: -25px;
+}
+
+  .learnMoreBtn {
+    padding: 5px 35px;
+    font-size: 0.85rem;
+    background-color: #0000;
+    border: 2px solid #fff;
+    border-style: inset;
+    color: #fff;
+    text-decoration: none;
+  }
+  .learnMoreBtn:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #logoMakerSectionContainer{
+  background-color: #000; 
+  padding: 30px 20px;
+  margin-top:-130px;
+}
+#notificationSectionContainer{
+  background-color: #000; 
+  padding: 30px 20px;
+}
+
+
+  #startNowBtn {
+    padding: 2px 35px;
+    font-size: 1rem;
+    background-color: #0000;
+    border: 2px solid #fff;
+    border-style: inset;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #contactus {
+  background-color: #000; 
+  padding:10px 15px; 
+  padding-bottom: 100px; 
+  margin-top:-60px;
+}
+
+  .logoMakerSection {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #000;
+    border: 0 !important;
+  }
+  .logoMakerSectionRight {
+    width: 90vw !important;
+    padding: 30px 0px;
+    align-self: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 !important;
+  }
+  .notificationSectionLeft {
+    width: 90vw !important;
+    padding: 30px 0px;
+    align-self: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 !important;
+}
+  .contInput {
+    padding: 0;
+  }
+  .contInputArea,
+  .v-text-field {
+    padding-top: 0 !important;
+  }
+  .v-text-field__slot > input,
+  textarea {
+    color: #fff !important;
+    padding: 5px;
+    border: 1px solid #fff;
+  }
+  .v-text-field__slot > textarea {
+    color: #fff !important;
+    padding: 5px;
+    border: 1px solid #fff;
+    bottom: 50px;
+  }
+  .v-text-field__slot > input::placeholder,
+  textarea::placeholder {
+    color: #9a9b9c !important;
+  }
+  .validate {
+    width: 60%;
+    text-align: left;
+    font-size: 10px;
+    margin: 0 auto;
+    color: red;
+  }
+  .v-responsive .bannerImages {
+    padding: 0 15px;
+    background-color: #000;
+    border-radius: .0;
   }
 }
 </style>
