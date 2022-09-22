@@ -1,74 +1,11 @@
 <template>
   <div class="project">
-    <b-container fluid style="margin-top:50px; width:90%;">
-      <v-row>
-        <v-col class="projectDescription"  cols="12" sm="4">
-          <h3 class="headingPr">{{ pname.pname }}</h3>
-          <v-card style="border-radius:11px 11px 0px 0px; ">
-            <v-img
-              style="height:300px;"
-              class="white--text align-end"
-              v-bind:src="pname.img"
-            >
-            </v-img>
-            <v-card-text class="text--primary">
-              <p style="width:fit-content; margin:0 auto;">
-                {{ pname.tagline }}
-              </p>
-            </v-card-text>
-          </v-card>
-        </v-col>
-        <v-col cols="6" style="position:relative">
-          <div class="infoSection">
-            <div>
-              <p class="pwebsite">{{pname.website}}</p>
-              <a class="pwebsitelink"
-                style="color:#2496FF;"
-                :href="pname.websitelink"
-                target="_blank"
-                >{{pname.websitelink}}</a
-              >
-            </div>
-            <div v-if="pname.categories">
-              <p class="pcat">Category:</p>
-              <p class="pcatlist">{{pname.categories}}</p>
-            </div>
-           
-            <div v-if="pname.tags">
-              <p class="ptags">Tags:</p>
-              <p class="ptaglist">{{pname.tags.join(', ')}}</p>
-            </div>
-            <div>
-              <p class="pshare">Share:</p>
-              <a 
-              class="psharelink"
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fdecabits%2F&amp;src=sdkpreparse"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a
-              class="psharelink"
-                href="https://twitter.com/intent/tweet?text=Checkout this awesome development tool-Logo Maker- at https://labs.decabits.com/"
-                target="_blank"
-                ><i class="fa fa-twitter"></i
-              ></a>
-              <a
-              class="psharelink"
-                href="https://api.whatsapp.com/send?phone=+91999925147&text=Checkout this awesome development tool-Logo Maker- at https://labs.decabits.com/"
-                target="_blank"
-                ><i style="color:#4FCE5D" class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-        </v-col>
-      </v-row>
-    </b-container>
     <div v-if="pname.description">
       <p class="desc">Project Description</p>
       <template v-if="pname.description.mainImage">
         <v-img       
-          :src="pname.description.mainImage"
-          style="height:60%; width:60%; margin:0 auto; margin-bottom:5vh !important; "
+          :src="pname.description.mainImage"  
+          class="descriptionImage"
         ></v-img>
       </template>
 
@@ -78,7 +15,7 @@
         </p>
       </template>
       
-      <div style="height:100px;"></div>
+      <div style="height:50px;"></div>
 
       <template  v-if="pname.description.steps.length">
         <div v-for="(s, i) in pname.description.steps" :key="i">
@@ -87,13 +24,13 @@
             <v-img       
               eager="true"
               :src="s.image"
-              style="height:60%; width:60%; margin:0 auto; border: 3px solid #999999" 
+              class="descriptionImage"
             ></v-img>
           </template>
         </div>       
       </template>
      
-      <p class="content" style="margin:16px auto; text-align:center; margin-bottom:0; ">
+      <p class="content" style="margin:16px auto; text-align:center; margin-bottom:30px; ">
         Feel free to give your suggestions or feedback in the following link or
         mail us at <a href="info@decabits.com">info@decabits.com</a>
       </p>
@@ -124,12 +61,17 @@ body {
   font-style: normal;
   font-size: 38px;
   font-weight: bold;
-  margin-top: 50px;
   margin-left: 100px;
   width: 90%;
   color: #fff;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 4vh;
+}
+.descriptionImage {
+  height:60%; 
+  width:60%; 
+  margin:0 auto; 
+  margin-bottom:5vh !important;
 }
 .headingPr {
   /* color: #333333; */
@@ -154,7 +96,7 @@ body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 auto;
   width: 85%;
-  font-size: 18px;
+  font-size: 1.05rem;
   font-style: normal;
   /*color: #555555; */
   color: #fff;
@@ -188,6 +130,11 @@ body {
 .v-image__image {
   background-size: contain !important;
 }
+.psharelink {
+  height: 20px;
+  width: 20px;
+  margin: 2px 8px;
+}
 @media only screen and (max-width: 400px){
   .pwebsite, .pwebsitelink , .pcat, .pcatlist, .ptags, .ptaglist, .pshare, .psharelink{
     font-size:4vw;
@@ -197,16 +144,59 @@ body {
     flex-direction:column;  
     margin-top:40px;
     justify-content:center;
-    margin-left:20vw;
     margin-bottom:20px;
   }
+  .infoSection {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
   .desc{
-    margin-top: 110px;
+    margin-left:0;
     text-align: justify;
     width: fit-content;
+    font-size: 1.65rem;
+    line-height: 1.3;
+    display:flex;
+    justify-content: space-evenly;
+    width:100%;
   }
+  .descriptionImage {
+  height:60%; 
+  width:80%; 
+  margin:0 auto; 
+  margin-bottom:5vh !important;
+  background-color: #fff;
+}
+.headingPr {
+  /* color: #333333; */
+  color: #fff;
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height:1.3;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 4vh;
+}
   .projectDescription{
     margin-top: -35px;
+  }
+.psharelink {
+  height: 20px;
+  width: 20px;
+  margin: 2px 8px;
+
+}
+
+.content {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+.container-fluid {
+    margin-top:0 !important;
   }
 
   }

@@ -2,7 +2,8 @@
   <div>
     <div class="topnav">
       <img src="../assets/Labdecabits_logo.svg" id="labsLogo" />
-      <a style="  max-width:250px; height:30px; margin: 0 20px 0 0 !important;
+      <a
+        style="  max-width:250px; height:30px; margin: 0 20px 0 0 !important;
       color:#000;
       align-self: center;
     font-size:100%;
@@ -13,12 +14,16 @@
     cursor:pointer;
     text-decoration:none;
       "
-          href="#contactus" > Contact Us </a>
+        href="#contactus"
+      >
+        Contact Us
+      </a>
     </div>
+    <section>
     <div id="headerContainer">
-    <video autoplay muted loop id="bgVideo">
-      <source src="../assets/matrix_bg.mp4" type="video/mp4">
-    </video>
+      <video autoplay muted loop id="bgVideo">
+        <source src="../assets/matrix_bg.mp4" type="video/mp4" />
+      </video>
       <div id="innrContainer">
         <h6 style="font-size:1.15rem; font-weight: 200;">Decabits Software</h6>
         <div id="divider1"></div>
@@ -37,10 +42,11 @@
           <a class="learnMoreBtn" href="#logoMakerSectionContainer">Learn More</a>
         </div>
       </div>
-    </div>
+    </div>    
+    </section>
     <section id="logoMakerSectionContainer">
       <v-card class="mx-auto logoMakerSection">
-         <v-img src="../assets/logoMakerPoster.png" class="bannerImages" ></v-img>
+        <v-img src="../assets/logoMakerPoster.png" class="bannerImages"></v-img>
         <section class="logoMakerSectionRight">
           <v-card-title>
             <h4 class="descriptionHeading">
@@ -55,7 +61,7 @@
           </v-card-title>
           <br />
           <v-card-subtitle style="color: #fff; margin-top:-25px">
-            <a id="startNowBtn" href="https://logomaker.decabits.com/" target="blank" >Start Now</a>
+            <a id="startNowBtn" href="https://logomaker.decabits.com/" target="blank">Start Now</a>
             <br />
           </v-card-subtitle>
           <v-card-subtitle style="color: #fff;">
@@ -64,14 +70,19 @@
             <br />
             <br />
             <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showLogoMaker, showNotification,'showLogoMaker', 'showNotification')"> -->
-               <a style="color: white; text-decoration: underline;font-weight: 700;" href="#showLogoMaker" @click="showFields(showLogoMaker, showNotification,'showLogoMaker', 'showNotification')" >Learn More</a>
+            <a
+              style="color: white; text-decoration: underline;font-weight: 700;"
+              href="#showLogoMaker"
+              @click="showFields(showLogoMaker, showNotification, 'showLogoMaker', 'showNotification')"
+              >Learn More</a
+            >
             <!-- </v-btn> -->
           </v-card-subtitle>
         </section>
       </v-card>
     </section>
-    <section id='notificationSectionContainer'>
-      <v-card class="mx-auto d-flex flex-md-row flex-column logoMakerSection">
+    <section id="notificationSectionContainer">
+      <v-card class="mx-auto notificationSection ">
         <section class="notificationSectionLeft">
           <v-card-title>
             <h4 style="font-weight: 400;">
@@ -79,51 +90,51 @@
             </h4>
           </v-card-title>
           <v-card-title>
-            <h1 class="descriptionSubHeading" >
+            <h1 class="descriptionSubHeading">
               Notification <br />
               Trapper
             </h1>
           </v-card-title>
           <br />
-          <v-card-subtitle  style="color: #fff; margin-top:-25px">
-            <a id="startNowBtn" href="http://notification-trapper.herokuapp.com/" target="blank" >Start Now</a>
+          <v-card-subtitle style="color: #fff; margin-top:-25px">
+            <a id="startNowBtn" href="http://notification-trapper.herokuapp.com/" target="blank">Start Now</a>
             <br />
           </v-card-subtitle>
-          
+
           <v-card-subtitle style="color: #fff; ">
             Notification Trapper by Decabits, is a self-curated tool by this startup based in New Delhi focussing to
             provide an easy to use tool for testing SMS/email before sending out the real text message.
             <br />
             <br />
-             <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showNotification, showLogoMaker, 'showNotification', 'showLogoMaker')"> -->
-                <a style="color: white; text-decoration: underline;font-weight: 700; padding-top:20px;" href="#showNotification" @click="showFields(showNotification, showLogoMaker, 'showNotification', 'showLogoMaker')" >Learn More</a>
+            <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showNotification, showLogoMaker, 'showNotification', 'showLogoMaker')"> -->
+            <a
+              style="color: white; text-decoration: underline;font-weight: 700; padding-top:20px;"
+              href="#showNotification"
+              @click="showFields(showNotification, showLogoMaker, 'showNotification', 'showLogoMaker')"
+              >Learn More</a
+            >
             <!-- </v-btn> -->
           </v-card-subtitle>
         </section>
-          <v-img src="../assets/logoMakerPoster.png" class="bannerImages" ></v-img>
+        <v-img src="../assets/logoMakerPoster.png" class="bannerImages"></v-img>
       </v-card>
     </section>
-    <br/>
-    <br/>
-    <div id="descriptionContainer"  style="background-color: #000" >
+    <br />
+    <br />
+    <div id="descriptionContainer" style="background-color: #000">
       <Projectdescription
-            :pname="cardData[0]"
-            style="display:none; background-color: #0000 !important"
-            id="showLogoMaker"
-          />
+        :pname="cardData[0]"
+        style="display:none; background-color: #0000 !important"
+        id="showLogoMaker"
+      />
       <Projectdescription
         :pname="cardData[1]"
         style="display:none; background-color: #0000 !important"
         id="showNotification"
       />
-    
     </div>
-    <br/>
-    <br/>
     <section id="contactus">
-      <h3 style="font-size: 3.05rem; color: #fff; font-weight: 400; text-align: center; margin-bottom: 50px">
-        You deserve the <span style="color: red;">best.</span>
-      </h3>
+      <h3 class="contHead">You deserve the <span style="color: red;">best.</span></h3>
       <v-card class="mx-auto" max-width="700" height="auto" style="background-color: #0A0A0A; color: #fff">
         <v-card-title class="p-4" style="font-size: 1.60rem;font-weight: 400; display: flex; justify-content: center;">
           Contact Us
@@ -132,13 +143,14 @@
         <v-card-subtitle style="color: #fff; display: flex; justify-content: center; padding-bottom:0; ">
           Want to discuss some work?
         </v-card-subtitle>
-        <v-card-subtitle class="w-100" style="color: #fff; display: flex; justify-content: center; padding:0; ">
+        <v-card-subtitle class="w-100" style="color: #fff;display:flex; justify-content: center; padding:0; ">
           Just drop a message below or mail us at
-          <a href="https://info@decabits.com" target="blank" class="pl-sm-4" >info@decabits.com </a>
         </v-card-subtitle>
+        <a href="https://info@decabits.com" target="blank" style="display:flex; justify-content: space-evenly"
+          >info@decabits.com
+        </a>
 
         <section>
-          <br />
           <br />
           <v-form ref="form" @submit="submitData">
             <v-container>
@@ -177,10 +189,10 @@
 <script>
 import axios from "axios";
 import Projectdescription from "./Projectdescription";
-import cardData from '../constants/cardData.js'
+import cardData from "../constants/cardData.js";
 export default {
   name: "Home1",
-  components:{
+  components: {
     Projectdescription,
   },
   data: () => ({
@@ -205,18 +217,17 @@ export default {
     },
   }),
   methods: {
-    showFields(e,previousE,currentClassName, prevClassName){
-      try {        
-        this.e = !e
+    showFields(e, previousE, currentClassName, prevClassName) {
+      try {
+        this.e = !e;
         this.previousE = !previousE;
-        let preBlog = document.getElementById(prevClassName)
-        preBlog.style.display = "none"
-        let blog = document.getElementById(currentClassName)
-        blog.style.display = "block"
+        let preBlog = document.getElementById(prevClassName);
+        preBlog.style.display = "none";
+        let blog = document.getElementById(currentClassName);
+        blog.style.display = "block";
       } catch (error) {
-        window.console.log(error)
+        window.console.log(error);
       }
-      
     },
     validateField() {
       this.$refs.form.validate();
@@ -325,7 +336,7 @@ export default {
   color: #fff;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
-#bgVideo{
+#bgVideo {
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -336,8 +347,6 @@ export default {
 }
 #descriptionContainer {
   background-color: #000;
-  margin-top: -8%;
-  padding-top: 50px;
 }
 .topnav {
   overflow: hidden;
@@ -365,34 +374,34 @@ export default {
   margin: 0;
 }
 #welcomeTxt1 {
-  font-size: 2.75rem; 
-  font-weight: bolder; 
-  color: #f53535; 
-  margin-top:5px;
-  display:inline;
-  position:relative;
+  font-size: 2.75rem;
+  font-weight: bolder;
+  color: #f53535;
+  margin-top: 5px;
+  display: inline;
+  position: relative;
 }
-#welcomeTxt1::after{
-    content:'';
-    width: 7ch;
-    border-bottom: 3px solid yellow;
-    padding-bottom: 10px;
-    height: 26px;
-    position: absolute;
-    bottom: -10%;
-    right: 0;
+#welcomeTxt1::after {
+  content: "";
+  width: 7ch;
+  border-bottom: 3px solid yellow;
+  padding-bottom: 10px;
+  height: 26px;
+  position: absolute;
+  bottom: -10%;
+  right: 0;
 }
-.bannerImages{
+.bannerImages {
   height: auto;
-  flex-basis:60%;
+  flex-basis: 60%;
   background-color: #000;
   border-radius: 0 !important;
 }
 #headerPara {
-  max-width: 480px; 
-  font-size:1.05rem; 
-  margin-top: 50px; 
-  font-family: 'Segoe UI', sans-serif;
+  max-width: 480px;
+  font-size: 1.05rem;
+  margin-top: 50px;
+  font-family: "Segoe UI", sans-serif;
 }
 #headerContainer {
   height: auto;
@@ -406,19 +415,18 @@ export default {
 
 #innrContainer {
   padding: 125px 0 0px 60px;
- 
 }
 
 .descriptionHeading {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
-.descriptionSubHeading{
-    line-height:4rem; 
-    font-weight: 400; 
-    font-size: 2.95rem; 
-    margin-top:-10px;
+.descriptionSubHeading {
+  line-height: 4rem;
+  font-weight: 400;
+  font-size: 2.95rem;
+  margin-top: -10px;
 }
 
 .learnMoreBtn {
@@ -435,18 +443,21 @@ export default {
   color: #fff;
 }
 
-#logoMakerSectionContainer{
-  background-color: #000; 
+#logoMakerSectionContainer {
+  background-color: #000;
   padding: 30px 60px;
 }
 
-#notificationSectionContainer{
-  background-color: #000; 
+#notificationSectionContainer {
+  background-color: #000;
   padding: 30px 80px 30px 5px;
 }
 
 #startNowBtn {
-  padding: 8px 85px;
+  padding: 8px 0px;
+  display: flex;
+  max-width: 250px;
+  justify-content: center;
   font-size: 1rem;
   background-color: #0000;
   border: 2px solid #fff;
@@ -456,13 +467,17 @@ export default {
 }
 
 #contactus {
-  background-color: #000; 
-  padding:45px 55px; 
-  padding-bottom: 100px; 
-  margin-top:-60px;
+  background-color: #000;
+  padding: 45px 55px;
+  padding-bottom: 100px;
 }
 
 .logoMakerSection {
+  display: flex;
+  background-color: #000 !important;
+  border: 0 !important;
+}
+.notificationSection {
   display: flex;
   background-color: #000 !important;
   border: 0 !important;
@@ -511,7 +526,14 @@ textarea::placeholder {
   margin: 0 auto;
   color: red;
 }
-@media only screen and (max-width: 900px) {
+.contHead {
+  font-size: 3.05rem;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 1200px) {
   .topnav {
     overflow: hidden;
     background-color: #fff;
@@ -535,14 +557,14 @@ textarea::placeholder {
     margin: 0;
   }
   #welcomeTxt1 {
-  font-size: 1.25rem; 
-  font-weight: bolder; 
-  color: #f53535; 
-  margin-top:5px;
-}
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: #f53535;
+    margin-top: 5px;
+  }
 
-#welcomeTxt1::after{
-    content:'';
+  #welcomeTxt1::after {
+    content: "";
     width: 100%;
     border-bottom: 3px solid yellow;
     padding-bottom: 10px;
@@ -550,20 +572,19 @@ textarea::placeholder {
     position: absolute;
     bottom: -10%;
     right: 0;
-}
-.bannerImages{
-  height: auto;
-  flex-basis:100%;
-  background-color: #000;
-  border-radius: 0 !important;
-  padding: 0 5%;
-}
-#headerPara {
-  max-width: 90%; 
-  font-size: 0.85rem; 
-  margin-top: 10px; 
-  font-family: 'Segoe UI', sans-serif;
-}
+  }
+  .bannerImages {
+    height: auto;
+    background-color: #000;
+    border-radius: 0 !important;
+    padding: 0 5%;
+  }
+  #headerPara {
+    max-width: 90%;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    font-family: "Segoe UI", sans-serif;
+  }
 
   #headerContainer {
     height: auto;
@@ -582,21 +603,19 @@ textarea::placeholder {
   }
 
   .descriptionHeading {
-    font-size: 1.15rem; 
+    font-size: 1.15rem;
     font-weight: 400;
-}
+  }
 
-#descriptionContainer {
-  background-color: #000;
-  margin-top: -16%;
-}
+  #descriptionContainer {
+    background-color: #000;
+  }
 
-.descriptionSubHeading{
-    font-weight: 400; 
-    font-size: 1.65rem;
-    line-height: 1.3; 
-    margin-top: -25px;
-}
+  .descriptionSubHeading {
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 4vw;
+  }
 
   .learnMoreBtn {
     padding: 5px 35px;
@@ -612,19 +631,19 @@ textarea::placeholder {
     color: #fff;
   }
 
-  #logoMakerSectionContainer{
-  background-color: #000; 
-  padding: 30px 20px;
-  margin-top:-130px;
-}
-#notificationSectionContainer{
-  background-color: #000; 
-  padding: 30px 20px;
-}
-
+  #logoMakerSectionContainer {
+    background-color: #000;
+    padding: 30px 20px;
+    padding-top: 0;
+  }
+  #notificationSectionContainer {
+    background-color: #000;
+    padding: 30px 20px;
+  }
 
   #startNowBtn {
-    padding: 2px 35px;
+    padding: 2px 0px;
+    width: 150px;
     font-size: 1rem;
     background-color: #0000;
     border: 2px solid #fff;
@@ -634,21 +653,26 @@ textarea::placeholder {
   }
 
   #contactus {
-  background-color: #000; 
-  padding:10px 15px; 
-  padding-bottom: 100px; 
-  margin-top:-60px;
-}
+    background-color: #000;
+    padding: 10px 15px;
+    padding-bottom: 100px;
+  }
 
   .logoMakerSection {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
+    background-color: #000;
+    border: 0 !important;
+  }
+  .notificationSection {
+    display: flex;
+    flex-direction: row;
     background-color: #000;
     border: 0 !important;
   }
   .logoMakerSectionRight {
     width: 90vw !important;
-    padding: 30px 0px;
+    padding: 30px 0px 0px 30px;
     align-self: center;
     background-color: #000;
     color: #fff;
@@ -661,7 +685,7 @@ textarea::placeholder {
     background-color: #000;
     color: #fff;
     border-radius: 0 !important;
-}
+  }
   .contInput {
     padding: 0;
   }
@@ -695,7 +719,422 @@ textarea::placeholder {
   .v-responsive .bannerImages {
     padding: 0 15px;
     background-color: #000;
-    border-radius: .0;
+    border-radius: 0;
+  }
+  .contHead {
+    font-size: 1.85rem;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 922px) {
+  .topnav {
+    overflow: hidden;
+    background-color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  #labsLogo {
+    height: 30px;
+    width: 100px;
+    margin-left: 5px;
+  }
+  #divider1 {
+    width: 60vw;
+    background-color: #ffff;
+    height: 0.8px;
+  }
+  #welcomeTxt {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  #welcomeTxt1 {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: #f53535;
+    margin-top: 5px;
+  }
+
+  #welcomeTxt1::after {
+    content: "";
+    width: 100%;
+    border-bottom: 3px solid yellow;
+    padding-bottom: 10px;
+    height: 26px;
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+  }
+  .bannerImages {
+    height: auto;
+    flex-basis: 100%;
+    background-color: #000;
+    border-radius: 0 !important;
+    padding: 0 5%;
+  }
+  #headerPara {
+    max-width: 90%;
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+  .content {
+    font-size: 0.85rem;
+  }
+
+  #headerContainer {
+    height: auto;
+    width: 100%;
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000d;
+    color: #ffff;
+  }
+
+  #innrContainer {
+    padding: 80px 0 30px 30px;
+    /*background: rgb(0, 0, 0); /* Fallback color */
+    /*background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  }
+
+  .descriptionHeading {
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+
+  #descriptionContainer {
+    background-color: #000;
+  }
+
+  .descriptionSubHeading {
+    font-weight: 400;
+    font-size: 1.65rem;
+    line-height: 1.3;
+  }
+
+  .learnMoreBtn {
+    padding: 5px 35px;
+    font-size: 0.85rem;
+    background-color: #0000;
+    border: 2px solid #fff;
+    border-style: inset;
+    color: #fff;
+    text-decoration: none;
+  }
+  .learnMoreBtn:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #logoMakerSectionContainer {
+    background-color: #000;
+    padding: 30px 20px;
+    padding-top: 0;
+  }
+  #notificationSectionContainer {
+    background-color: #000;
+    padding: 30px 20px;
+  }
+
+  #startNowBtn {
+    padding: 2px 0px;
+    width: 150px;
+    font-size: 1rem;
+    background-color: #0000;
+    border: 2px solid #fff;
+    border-style: inset;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #contactus {
+    background-color: #000;
+    padding: 10px 15px;
+    padding-bottom: 100px;
+  }
+
+  .logoMakerSection {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #000;
+    border: 0 !important;
+  }
+  .notificationSection {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    border: 0 !important;
+  }
+  .logoMakerSectionRight {
+    width: 90vw !important;
+    padding: 30px 0px;
+    align-self: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 !important;
+  }
+  .notificationSectionLeft {
+    width: 90vw !important;
+    padding: 30px 0px;
+    align-self: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 !important;
+  }
+  .contInput {
+    padding: 0;
+  }
+  .contInputArea,
+  .v-text-field {
+    padding-top: 0 !important;
+  }
+  .v-text-field__slot > input,
+  textarea {
+    color: #fff !important;
+    padding: 5px;
+    border: 1px solid #fff;
+  }
+  .v-text-field__slot > textarea {
+    color: #fff !important;
+    padding: 5px;
+    border: 1px solid #fff;
+    bottom: 50px;
+  }
+  .v-text-field__slot > input::placeholder,
+  textarea::placeholder {
+    color: #9a9b9c !important;
+  }
+  .validate {
+    width: 60%;
+    text-align: left;
+    font-size: 10px;
+    margin: 0 auto;
+    color: red;
+  }
+  .v-responsive .bannerImages {
+    padding: 0 15px;
+    background-color: #000;
+    border-radius: 0;
+  }
+  .contHead {
+    font-size: 1.85rem;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .container-fluid {
+    margin-top:30vh !important;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .topnav {
+    overflow: hidden;
+    background-color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  #labsLogo {
+    height: 30px;
+    width: 100px;
+    margin-left: 5px;
+  }
+  #divider1 {
+    width: 60vw;
+    background-color: #ffff;
+    height: 0.8px;
+  }
+  #welcomeTxt {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  #welcomeTxt1 {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: #f53535;
+    margin-top: 5px;
+  }
+
+  #welcomeTxt1::after {
+    content: "";
+    width: 100%;
+    border-bottom: 3px solid yellow;
+    padding-bottom: 10px;
+    height: 26px;
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+  }
+  .bannerImages {
+    height: auto;
+    flex-basis: 100%;
+    background-color: #000;
+    border-radius: 0 !important;
+    padding: 0 5%;
+  }
+  #headerPara {
+    max-width: 90%;
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+  .content {
+    font-size: 0.85rem;
+  }
+
+  #headerContainer {
+    height: auto;
+    width: 100%;
+    min-height: 86vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000d;
+    color: #ffff;
+  }
+
+  #innrContainer {
+    padding: 80px 0 30px 30px;
+    /*background: rgb(0, 0, 0); /* Fallback color */
+    /*background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  }
+
+  .descriptionHeading {
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+
+  #descriptionContainer {
+    background-color: #000;
+  }
+
+  .descriptionSubHeading {
+    font-weight: 400;
+    font-size: 1.65rem;
+    line-height: 1.3;
+  }
+
+  .learnMoreBtn {
+    padding: 5px 35px;
+    font-size: 0.85rem;
+    background-color: #0000;
+    border: 2px solid #fff;
+    border-style: inset;
+    color: #fff;
+    text-decoration: none;
+  }
+  .learnMoreBtn:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #logoMakerSectionContainer {
+    background-color: #000;
+    padding: 30px 20px;
+    padding-top: 0;
+  }
+  #notificationSectionContainer {
+    background-color: #000;
+    padding: 30px 20px;
+  }
+
+  #startNowBtn {
+    padding: 2px 0px;
+    width: 150px;
+    font-size: 1rem;
+    background-color: #0000;
+    border: 2px solid #fff;
+    border-style: inset;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #contactus {
+    background-color: #000;
+    padding: 10px 15px;
+    padding-bottom: 100px;
+  }
+
+  .logoMakerSection {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #000;
+    border: 0 !important;
+  }
+  .notificationSection {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    border: 0 !important;
+  }
+  .logoMakerSectionRight {
+    width: 90vw !important;
+    padding: 30px 0px;
+    align-self: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 !important;
+  }
+  .notificationSectionLeft {
+    width: 90vw !important;
+    padding: 30px 0px;
+    align-self: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 !important;
+  }
+  .contInput {
+    padding: 0;
+  }
+  .contInputArea,
+  .v-text-field {
+    padding-top: 0 !important;
+  }
+  .v-text-field__slot > input,
+  textarea {
+    color: #fff !important;
+    padding: 5px;
+    border: 1px solid #fff;
+  }
+  .v-text-field__slot > textarea {
+    color: #fff !important;
+    padding: 5px;
+    border: 1px solid #fff;
+    bottom: 50px;
+  }
+  .v-text-field__slot > input::placeholder,
+  textarea::placeholder {
+    color: #9a9b9c !important;
+  }
+  .validate {
+    width: 60%;
+    text-align: left;
+    font-size: 10px;
+    margin: 0 auto;
+    color: red;
+  }
+  .v-responsive .bannerImages {
+    padding: 0 15px;
+    background-color: #000;
+    border-radius: 0;
+  }
+  .contHead {
+    font-size: 1.85rem;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .container-fluid {
+    margin-top:30vh !important;
   }
 }
 </style>
