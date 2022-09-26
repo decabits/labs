@@ -1,7 +1,7 @@
 <template>
   <div class="project">
     <div v-if="pname.description">
-      <p class="desc">Project Description</p>
+      <p class="desc">{{pname.pname}}</p>
       <template v-if="pname.description.mainImage">
         <v-img       
           :src="pname.description.mainImage"  

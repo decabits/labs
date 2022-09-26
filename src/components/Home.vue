@@ -46,7 +46,7 @@
     </section>
     <section id="logoMakerSectionContainer">
       <v-card class="mx-auto logoMakerSection">
-        <v-img src="../assets/logoMakerPoster.png" class="bannerImages"></v-img>
+        <v-img src="../assets/foldShirt.jpg" class="bannerImages"></v-img>
         <section class="logoMakerSectionRight">
           <v-card-title>
             <h4 class="descriptionHeading">
@@ -116,7 +116,7 @@
             <!-- </v-btn> -->
           </v-card-subtitle>
         </section>
-        <v-img src="../assets/logoMakerPoster.png" class="bannerImages"></v-img>
+        <v-img src="../assets/notificationTrapper.jpg" class="bannerImages"></v-img>
       </v-card>
     </section>
     <br />
