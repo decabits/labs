@@ -156,16 +156,17 @@
             <v-container>
               <v-row justify="center" class="p-sm-4">
                 <v-col cols="12" md="6">
-                  <v-text-field placeholder="Name" class="contInput" v-model="form.name" required></v-text-field>
+                  <v-text-field solo dense  placeholder="Name" class="contInput" v-model="form.name" required></v-text-field>
                   <p class="validate">{{ errors.name }}</p>
-                  <v-text-field placeholder="Email" class="contInput" v-model="form.email" required></v-text-field>
+                  <v-text-field solo dense placeholder="Email" class="contInput" v-model="form.email" required></v-text-field>
                   <p class="validate">{{ errors.email }}</p>
-                  <v-text-field placeholder="Phone No.." class="contInput" v-model="form.phone" required></v-text-field>
+                  <v-text-field solo dense placeholder="Phone No.." class="contInput" v-model="form.phone" required></v-text-field>
                   <p class="validate">{{ errors.phone }}</p>
                 </v-col>
 
                 <v-col cols="12" md="6">
                   <v-textarea
+                    solo dense
                     row="6"
                     placeholder="Write your message..."
                     class="contInputArea"
@@ -175,7 +176,8 @@
                   <p class="validate">{{ errors.message }}</p>
                 </v-col>
               </v-row>
-              <b-button type="submit" style="margin:auto;display:flex" variant="primary">
+              <b-spinner v-bind:style="loading ?'margin:auto;display:flex':'display: none'" label="Spinning" ></b-spinner>
+              <b-button type="submit" v-bind:style="loading ?'display: none':'margin:auto;display:flex'" variant="primary" >
                 Submit
               </b-button>
             </v-container>
@@ -199,6 +201,7 @@ export default {
     showNotification: false,
     showLogoMaker: false,
     allowSpaces: false,
+    loading: false,
     cardData,
     match: "Foobar",
     max: 0,
@@ -244,22 +247,29 @@ export default {
     },
     submitData(e) {
       e.preventDefault();
+        this.loading = true;
       let newData = {};
       if (this.form.name == "") {
         this.errors.name = "Name field is required!";
+        this.loading = false;
+      }else{
+        this.errors.name = ""
       }
       if (this.form.email.toString() == "") {
         this.errors.email = "Email field is required!";
+        this.loading = false;
       } else {
         this.errors.email = "";
       }
       if (this.form.phone.toString() == "") {
         this.errors.phone = "Phone field is required!";
+        this.loading = false;
       } else {
         this.errors.phone = "";
       }
       if (this.form.message.toString() == "") {
         this.errors.message = "Message field is required!";
+        this.loading = false;
       } else {
         this.errors.message = "";
       }
@@ -281,7 +291,6 @@ export default {
           to: "info@decabits.com",
           from: `"DecabitsLab" info@decabits.com`,
         };
-        window.console.log(this.form.name, this.form.email, this.form.phone, this.form.message);
         axios
           .post("https://db-node-mail-service.herokuapp.com/api/email", newData, {
             headers: {
@@ -290,7 +299,11 @@ export default {
           })
           .then((res) => {
             this.snackbar = true;
-            this.$refs["my-modal"].hide();
+            this.loading = false;
+            this.form.name = ""
+            this.form.email = ""
+            this.form.phone = ""
+            this.form.message = ""
             console.log(res.data);
           });
       }
@@ -335,6 +348,14 @@ export default {
   scroll-behavior: smooth !important;
   color: #fff;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.v-input input:focus, .v-input input:active  {
+  outline: 1px solid #fff !important;
+  box-shadow: none !important;
+}
+.v-input__slot {
+  background-color: rgb(10, 10, 10) !important;
+  padding: 0 !important;
 }
 #bgVideo {
   right: 0;
