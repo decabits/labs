@@ -529,6 +529,8 @@ textarea {
   color: #fff !important;
   padding: 5px;
   border: 1px solid #fff;
+  height: 162px !important;
+  margin-top: 3px !important
 }
 .v-text-field__slot > textarea {
   color: #fff !important;
@@ -953,6 +955,9 @@ textarea::placeholder {
   }
   .container-fluid {
     margin-top:30vh !important;
+  }
+  .col-12 {
+    padding: 0 12px 0 12px !important;
   }
 }
 @media only screen and (max-width: 420px) {
