@@ -2,91 +2,17 @@
   <div>
     <div class="topnav">
       <img src="../assets/Labdecabits_logo.svg" id="labsLogo" />
-      <a
-        style="  max-width:250px; height:30px; margin: 0 20px 0 0 !important;
-      color:#000;
-      align-self: center;
-    font-size:100%;
-    font-weight:400;
-    border: 1px solid #000;
-    padding: 0 4%;
-    border-style:inset;
-    cursor:pointer;
-    text-decoration:none;
-      "
-        href="#contactus"
-      >
-        Contact Us
-      </a>
+    </div>
+    <div style="margin-top:70px" >
+        <button style="padding: 8px 45px; border: 2px solid #fff; margin-left: 80px;" @click="closeWindow();" > Back </button>
     </div>
     <section>
-    <div id="headerContainer">
-      <video autoplay muted loop id="bgVideo">
-        <source src="../assets/matrix_bg.mp4" type="video/mp4" />
-      </video>
+    <div id="headerContainer2">
       <div id="innrContainer">
-        <h6 style="font-size:1.15rem; font-weight: 200;">Decabits Software</h6>
-        <div id="divider1"></div>
-        <div style="margin-top: 30px; margin-bottom: 30px">
-          <h3 id="welcomeTxt">Welcome to</h3>
-          <h3 id="welcomeTxt1">
-            Lab Decabits
-          </h3>
-          <br />
-          <p id="headerPara">
-            Your self designed laboratory to create richly detailed, open-source & effective tools. Brainstorming,
-            finding ideas & experimenting with the latest tech stack is now a click away. Quench your knowledge thirst
-            in 3,2,1! tab to click
-          </p>
-          <br />
-          <a class="learnMoreBtn" href="#logoMakerSectionContainer">Learn More</a>
-        </div>
-      </div>
-    </div>    
-    </section>
-    <section id="logoMakerSectionContainer">
-      <v-card class="mx-auto logoMakerSection">
-        <v-img src="../assets/foldShirt.jpg" class="bannerImages"></v-img>
-        <section class="logoMakerSectionRight">
+         <section>
           <v-card-title>
             <h4 class="descriptionHeading">
-              Decabits LogoMaker
-            </h4>
-          </v-card-title>
-          <v-card-title>
-            <h1 class="descriptionSubHeading">
-              Logos that fits <br />
-              everywhere!
-            </h1>
-          </v-card-title>
-          <br />
-          <v-card-subtitle style="color: #fff; margin-top:-25px">
-            <a id="startNowBtn" href="https://logomaker.decabits.com/" target="blank">Start Now</a>
-            <br />
-          </v-card-subtitle>
-          <v-card-subtitle style="color: #fff;">
-            If you're on our website, you're in exactly the right place! We create logos using Logo Maker to build your
-            brand identity even if you are a small business or consumer.
-            <br />
-            <br />
-            <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showLogoMaker, showNotification,'showLogoMaker', 'showNotification')"> -->
-            <a
-              style="color: white; text-decoration: underline;font-weight: 700;"
-              href="/project-description/logomaker"
-              target="_blank"
-              >Learn More</a
-            >
-            <!-- </v-btn> -->
-          </v-card-subtitle>
-        </section>
-      </v-card>
-    </section>
-    <section id="notificationSectionContainer">
-      <v-card class="mx-auto notificationSection ">
-        <section class="notificationSectionLeft">
-          <v-card-title>
-            <h4 style="font-weight: 400;">
-              Decabits Lab
+              Decabits Labs
             </h4>
           </v-card-title>
           <v-card-title>
@@ -97,105 +23,37 @@
           </v-card-title>
           <br />
           <v-card-subtitle style="color: #fff; margin-top:-25px">
-            <a id="startNowBtn" href="http://notification-trapper.herokuapp.com/" target="blank">Start Now</a>
             <br />
           </v-card-subtitle>
-
-          <v-card-subtitle style="color: #fff; ">
-            Notification Trapper by Decabits, is a self-curated tool by this startup based in New Delhi focussing to
-            provide an easy to use tool for testing SMS/email before sending out the real text message.
+          <v-card-subtitle style="color: #fff; max-width:400px">
+            Notification Trapper by Decabits, is a self-curated tool by this startup based in New Delhi 
+            focussing to provide an easy to use tool for testing SMS/email before sending out the real text message.
             <br />
             <br />
-            <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showNotification, showLogoMaker, 'showNotification', 'showLogoMaker')"> -->
-            <a
-              style="color: white; text-decoration: underline;font-weight: 700; padding-top:20px;"
-              href="/project-description/notificationtrapper"
-              target="_blank"
-              >Learn More</a
-            >
-            <!-- </v-btn> -->
           </v-card-subtitle>
-        </section>
-        <v-img src="../assets/notificationTrapper.jpg" class="bannerImages"></v-img>
-      </v-card>
+        </section>      
+      </div>
+    </div>    
     </section>
+    
+   
     <br />
     <br />
-    <div id="descriptionContainer" style="background-color: #000">
-      <Projectdescription
-        :pname="cardData[0]"
-        style="display:none; background-color: #0000 !important"
+      <ProjectDescriptionNew
+        :pname="cardData[1]"
         id="showLogoMaker"
       />
-      <Projectdescription
-        :pname="cardData[1]"
-        style="display:none; background-color: #0000 !important"
-        id="showNotification"
-      />
-    </div>
-    <section id="contactus">
-      <h3 class="contHead">You deserve the <span style="color: red;">best.</span></h3>
-      <v-card class="mx-auto" max-width="700" height="auto" style="background-color: #0A0A0A; color: #fff">
-        <v-card-title class="p-4" style="font-size: 1.60rem;font-weight: 400; display: flex; justify-content: center;">
-          Contact Us
-          <br />
-        </v-card-title>
-        <v-card-subtitle style="color: #fff; display: flex; justify-content: center; padding-bottom:0; ">
-          Want to discuss some work?
-        </v-card-subtitle>
-        <v-card-subtitle class="w-100" style="color: #fff;display:flex; justify-content: center; padding:0; ">
-          Just drop a message below or mail us at
-        </v-card-subtitle>
-        <a href="https://info@decabits.com" target="blank" style="display:flex; justify-content: space-evenly"
-          >info@decabits.com
-        </a>
-
-        <section>
-          <br />
-          <v-form ref="form" @submit="submitData">
-            <v-container>
-              <v-row justify="center" class="p-sm-4">
-                <v-col cols="12" md="6">
-                  <v-text-field solo dense  placeholder="Name" class="contInput" v-model="form.name" required></v-text-field>
-                  <p class="validate">{{ errors.name }}</p>
-                  <v-text-field solo dense placeholder="Email" class="contInput" v-model="form.email" required></v-text-field>
-                  <p class="validate">{{ errors.email }}</p>
-                  <v-text-field solo dense placeholder="Phone No.." class="contInput" v-model="form.phone" required></v-text-field>
-                  <p class="validate">{{ errors.phone }}</p>
-                </v-col>
-
-                <v-col cols="12" md="6">
-                  <v-textarea
-                    solo dense
-                    row="6"
-                    placeholder="Write your message..."
-                    class="contInputArea"
-                    v-model="form.message"
-                    required
-                  ></v-textarea>
-                  <p class="validate">{{ errors.message }}</p>
-                </v-col>
-              </v-row>
-              <b-spinner v-bind:style="loading ?'margin:auto;display:flex':'display: none'" label="Spinning" ></b-spinner>
-              <b-button type="submit" v-bind:style="loading ?'display: none':'margin:auto;display:flex'" variant="primary" >
-                Submit
-              </b-button>
-            </v-container>
-          </v-form>
-        </section>
-      </v-card>
-    </section>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import Projectdescription from "./Projectdescription";
+import ProjectDescriptionNew from "./ProjectDescriptionNew";
 import cardData from "../constants/cardData.js";
 export default {
   name: "Home1",
   components: {
-    Projectdescription,
+    ProjectDescriptionNew,
   },
   data: () => ({
     showNotification: false,
@@ -220,6 +78,9 @@ export default {
     },
   }),
   methods: {
+    closeWindow: function () {		
+			window.close();	
+    },
     showFields(e, previousE, currentClassName, prevClassName) {
       try {
         this.e = !e;
@@ -357,15 +218,6 @@ export default {
   background-color: rgb(10, 10, 10) !important;
   padding: 0 !important;
 }
-#bgVideo {
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  position: absolute;
-  z-index: -1;
-}
 #descriptionContainer {
   background-color: #000;
 }
@@ -424,18 +276,21 @@ export default {
   margin-top: 50px;
   font-family: "Segoe UI", sans-serif;
 }
-#headerContainer {
-  height: auto;
-  width: 100%;
-  min-height: 86vh;
+#headerContainer2 {
+  background-image: url("../assets/notificationTrapper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #000d;
   color: #ffff;
+  margin-left:80px;
+  margin-right:80px;
+  margin-top:40px;
+  background-position: center;
+  padding: 100px;
 }
 
 #innrContainer {
-  padding: 125px 0 0px 60px;
+  padding: 125px 0 0px 20px;
 }
 
 .descriptionHeading {
@@ -609,10 +464,7 @@ textarea::placeholder {
     font-family: "Segoe UI", sans-serif;
   }
 
-  #headerContainer {
-    height: auto;
-    width: 100%;
-    min-height: 86vh;
+  #headerContainer2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000d;
@@ -810,10 +662,7 @@ textarea::placeholder {
     font-size: 0.85rem;
   }
 
-  #headerContainer {
-    height: auto;
-    width: 100%;
-    min-height: 60vh;
+  #headerContainer2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000d;
@@ -1016,10 +865,7 @@ textarea::placeholder {
     font-size: 0.85rem;
   }
 
-  #headerContainer {
-    height: auto;
-    width: 100%;
-    min-height: 86vh;
+  #headerContaine21 {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000d;
