@@ -3,7 +3,7 @@
     <b-container id="crd" fluid>
       <v-row>
       
-        <v-col cols="12" sm="4" v-for="(item, i) in Itemfilter" :key="i"
+        <v-col class="productCard" cols="12" sm="4" v-for="(item, i) in Itemfilter" :key="i"
         >
           <v-hover v-slot:default="{ hover }" close-delay="200">
             <v-card
@@ -20,6 +20,7 @@
                 <v-img v-bind:src="item.img" aspect-ratio="2"> </v-img>
               </div>
               <v-card-title style="display:flex; justify-content:left;">{{ item.pname }}</v-card-title>
+              <p style="font-weight:bold; display:flex; justify-content:left; padding-left: 16px; margin-top: -15px; margin-bottom: -15px;">{{ item.launchDate }}</p>
               <v-card-text>
                 <v-row align="left" class="mx-0">
                   <div class="grey--text ml-4"></div>
@@ -103,6 +104,9 @@ export default {
     display:flex;
     flex-direction:column;
 
+  }
+  .productCard{
+    margin-bottom: -80px;
   }
 }
 </style>
