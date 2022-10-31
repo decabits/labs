@@ -8,7 +8,8 @@ import NotificationTrapperDetail from "../components/NotificationTrapperDetail"
 
 Vue.use(Router);
 const router = new Router({
-    mode: "history",
+    // mode: "history",
+    base: '/',
     routes: [{
             path: "/",
             name: "Home",

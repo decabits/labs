@@ -422,11 +422,12 @@ export default {
 #headerContainer {
   height: auto;
   width: 100%;
-  min-height: 86vh;
+  /* min-height: 86vh; */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #000d;
   color: #ffff;
+  padding-bottom: 5%;
 }
 
 #innrContainer {
