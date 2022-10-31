@@ -72,8 +72,7 @@
             <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showLogoMaker, showNotification,'showLogoMaker', 'showNotification')"> -->
             <a
               style="color: white; text-decoration: underline;font-weight: 700;"
-              href="/project-description/logomaker"
-              target="_blank"
+              href="javascript: return false"
               >Learn More</a
             >
             <!-- </v-btn> -->
@@ -109,8 +108,7 @@
             <!-- <v-btn style="color: #fff; text-decoration: underline; font-size: 16px;" icon @click="showFields(showNotification, showLogoMaker, 'showNotification', 'showLogoMaker')"> -->
             <a
               style="color: white; text-decoration: underline;font-weight: 700; padding-top:20px;"
-              href="/project-description/notificationtrapper"
-              target="_blank"
+              href="javascript: return false"
               >Learn More</a
             >
             <!-- </v-btn> -->
