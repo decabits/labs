@@ -9,6 +9,7 @@ export default {
   name: "App",
 };
 </script>
+
 <style>
   @import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
 * {
