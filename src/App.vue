@@ -9,4 +9,11 @@ export default {
   name: "App",
 };
 </script>
-<style></style>
+<style>
+  @import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
+* {
+  scroll-behavior: smooth !important;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+</style>

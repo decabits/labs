@@ -154,7 +154,7 @@
           <br />
           <v-form ref="form" @submit="submitData">
             <v-container>
-              <v-row justify="center" class="p-sm-4">
+              <v-row justify="center" class="px-sm-4 pb-0">
                 <v-col cols="12" md="6">
                   <v-text-field solo dense  placeholder="Name" class="contInput" v-model="form.name" required></v-text-field>
                   <p class="validate">{{ errors.name }}</p>
@@ -177,7 +177,7 @@
                 </v-col>
               </v-row>
               <b-spinner v-bind:style="loading ?'margin:auto;display:flex':'display: none'" label="Spinning" ></b-spinner>
-              <b-button type="submit" v-bind:style="loading ?'display: none':'margin:auto;display:flex'" variant="primary" >
+              <b-button class="mb-3" type="submit" v-bind:style="loading ?'display: none':'margin:auto;display:flex'" variant="primary" >
                 Submit
               </b-button>
             </v-container>
@@ -344,11 +344,6 @@ export default {
 </script>
 
 <style>
-* {
-  scroll-behavior: smooth !important;
-  color: #fff;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-}
 .v-input input:focus, .v-input input:active  {
   outline: 1px solid #fff !important;
   box-shadow: none !important;
@@ -528,14 +523,15 @@ export default {
 textarea {
   color: #fff !important;
   padding: 5px;
-  border: 1px solid #fff;
+  border: 1px solid #ddd;
   height: 162px !important;
-  margin-top: 3px !important
+  margin-top: 3px !important;
+  border-radius: 6px !important;
+  padding-left: 10px !important;
 }
 .v-text-field__slot > textarea {
   color: #fff !important;
   padding: 5px;
-  border: 1px solid #fff;
   bottom: 50px;
 }
 .v-text-field__slot > input::placeholder,
